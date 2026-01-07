@@ -59,7 +59,7 @@ export default function EntranceAnimation({ onComplete }) {
   if (hasPlayed) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-black">
+    <div className="fixed inset-0 z-9999 bg-black">
       <video
         ref={videoRef}
         className="w-full h-full object-cover"

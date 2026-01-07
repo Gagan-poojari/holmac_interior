@@ -32,7 +32,7 @@ export default function CustomLoader({ logoSrc = null }) {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d]">
+    <div className="fixed inset-0 z-9999 flex items-center justify-center bg-linear-to-br from-[#1a1a1a] to-[#2d2d2d]">
       <div className="text-center">
         <div className="relative inline-block">
           {/* Progress ring */}
@@ -59,7 +59,7 @@ export default function CustomLoader({ logoSrc = null }) {
 
           {/* Logo container */}
           <div 
-            className="w-[90px] h-[90px]"
+            className="w-22.5 h-22.5"
             style={{
               animation: 'elegantRotate 3s cubic-bezier(0.4, 0, 0.2, 1) infinite',
               filter: 'drop-shadow(0 10px 30px rgba(212, 175, 55, 0.5))'
