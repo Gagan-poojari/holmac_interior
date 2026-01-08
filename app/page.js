@@ -1,10 +1,12 @@
 'use client';
 import { useState, useEffect } from 'react';
 import EntranceAnimation from './components/EntranceAnimation';
+import HolmacHomepage from './components/HalmacHomepage';
 
 export default function Home() {
   const [showEntrance, setShowEntrance] = useState(true);
   const [hasPlayedBefore, setHasPlayedBefore] = useState(false);
+  const [showFade, setShowFade] = useState(true);
 
   useEffect(() => {
     // Check if user has seen the animation this session
@@ -28,7 +30,20 @@ export default function Home() {
       )}
       {(!showEntrance || hasPlayedBefore) && (
         <div>
-          YourActualWebsite
+          <HolmacHomepage />
+          {showFade && (
+        <div 
+          className="fixed inset-0 z-10000 bg-black pointer-events-none"
+          style={{ animation: 'fadeOut 0.7s ease-out forwards' }}
+        />
+      )}
+      
+      <style jsx>{`
+        @keyframes fadeOut {
+          from { opacity: 1; }
+          to { opacity: 0; }
+        }
+      `}</style>
         </div>
       )}
     </>
