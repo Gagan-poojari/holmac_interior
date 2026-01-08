@@ -3,10 +3,41 @@
 body.intro-active {
   overflow: hidden;
 }
-/* Add to your global CSS file (e.g., globals.css) or configure Tailwind */
 .perspective-1000 {
   perspective: 1000px;
 }
 .transform-style-preserve-3d {
   transform-style: preserve-3d;
+}
+
+.smooth{
+  transition: all ease-in-out 0.5s;
+}
+
+.befaft::after{
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0%;
+  height: 1.5px;
+  background: #d4af37;
+}
+
+.befaft:hover::after{
+  animation: wztoh 0.3s ease-in-out 1;
+  width: 100%;
+}
+
+.befaft:active:after{
+  background: #d4af37;
+}
+
+@keyframes wztoh {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
 }

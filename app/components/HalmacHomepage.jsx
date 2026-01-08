@@ -101,16 +101,16 @@ export default function HolmacHomepage() {
                     <div className="flex items-center gap-3">
                         <img src="/holmac_circle.png" alt="Holmac" className="h-14 w-14" />
                         <div>
-                            <h1 className="text-2xl font-light tracking-[0.2em] text-[#2d2416]">HOLMAC</h1>
+                            <h1 className={`text-2xl font-light tracking-[0.2em] ${scrollY > 50 ? 'text-[#2d2416]' : 'text-[#ffffff]'}`}>HOLMAC</h1>
                             <p className="text-xs text-[#b8985f] tracking-[0.3em]">INTERIOR SOLUTIONS</p>
                         </div>
                     </div>
 
                     <div className="hidden md:flex items-center gap-10">
-                        <a href="#about" className="text-[#2d2416] hover:text-[#d4af37] transition-all duration-300 text-sm tracking-wider font-light">About</a>
-                        <a href="#products" className="text-[#2d2416] hover:text-[#d4af37] transition-all duration-300 text-sm tracking-wider font-light">Products</a>
-                        <a href="#gallery" className="text-[#2d2416] hover:text-[#d4af37] transition-all duration-300 text-sm tracking-wider font-light">Gallery</a>
-                        <a href="#contact" className="px-8 py-3 bg-[#d4af37] text-[#2d2416] text-sm tracking-wider font-medium hover:bg-[#e6c255] transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5">
+                        <a href="#about" className={`${scrollY > 50 ? 'text-[#2d2416]' : 'text-[#ffffff]'} relative befaft smooth hover:text-[#d4af37] transition-all duration-300 text-sm tracking-wider font-light`}>About</a>
+                        <a href="#products" className={`${scrollY > 50 ? 'text-[#2d2416]' : 'text-[#ffffff]'} relative befaft smooth hover:text-[#d4af37] transition-all duration-300 text-sm tracking-wider font-light`}>Products</a>
+                        <a href="#gallery" className={`${scrollY > 50 ? 'text-[#2d2416]' : 'text-[#ffffff]'} relative befaft smooth hover:text-[#d4af37] transition-all duration-300 text-sm tracking-wider font-light`}>Gallery</a>
+                        <a href="#contact" className={`${scrollY > 50 ? 'text-[#2d2416]' : 'text-[#ffffff]'} relative befaft smooth px-8 py-3 bg-[#d4af37] text-sm tracking-wider font-medium hover:bg-[#e6c255] transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5`}>
                             Get in Touch
                         </a>
                     </div>
