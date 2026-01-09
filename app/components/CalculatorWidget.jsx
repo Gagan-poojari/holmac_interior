@@ -88,7 +88,7 @@ const CalculatorWidget = ({ onClick, label = 'CALCULATE NOW', buttonText = 'EMI'
         </svg>
 
         {/* Tooltip */}
-        <span className="absolute right-full mr-4 px-4 py-2 bg-gray-800 text-[#d4af37] text-xs tracking-widest whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-sm pointer-events-none border border-[#d4af37]/30">
+        <span className="absolute right-full mr-4 px-4 py-2 bg-[#2d2416] text-[#d4af37] text-xs tracking-widest whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-sm pointer-events-none border border-[#d4af37]/30">
           {label}
         </span>
       </button>
