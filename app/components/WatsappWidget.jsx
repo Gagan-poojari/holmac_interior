@@ -21,7 +21,7 @@ const WhatsAppWidget = ({ phoneNumber = "919916511351", message = "Hello Holmac!
   const strokeRotation = (scrollY * 0.1) % 360;
 
   return (
-    <div className="fixed bottom-8 right-8 z-9999 group">
+    <div className="fixed md:bottom-8 bottom-28 right-8 z-9999 group">
       {/* The "Cool" Background Animation (Paint Stroke Effect) */}
       <div 
         className="absolute inset-0 bg-[#d4af37] opacity-20 blur-xl transition-transform duration-300 ease-out pointer-events-none"

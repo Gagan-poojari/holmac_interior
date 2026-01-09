@@ -2,6 +2,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Phone, Mail, MapPin, ChevronDown, Instagram, Facebook, Linkedin, ArrowRight, Sparkles, Award, Users, Heart } from 'lucide-react';
 import WhatsAppWidget from './WatsappWidget';
+import PhoneNavbar from './PhoneNavbar';
 
 export default function HolmacHomepage() {
     const [scrollY, setScrollY] = useState(0);
@@ -88,7 +89,7 @@ export default function HolmacHomepage() {
             }} />
 
             {/* Navigation */}
-            <nav className="fixed top-0 w-full z-50 transition-all duration-500"
+            <nav className="block fixed top-0 w-full z-50 transition-all duration-500"
                 style={{
                     background: scrollY > 50
                         ? 'rgba(248, 246, 241, 0.98)'
@@ -116,6 +117,11 @@ export default function HolmacHomepage() {
                     </div>
                 </div>
             </nav>
+
+            {/* Mobile Phone Navbar (visible on small screens) */}
+            <div className="md:hidden">
+                <PhoneNavbar />
+            </div>
 
             {/* Hero Section */}
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -156,7 +162,7 @@ export default function HolmacHomepage() {
             </section>
 
             {/* About Section - Redesigned */}
-            <section id="about" ref={addToRefs} className="relative py-40 px-6 bg-linear-to-br from-[#fdfcf9] via-[#f8f6f1] to-[#f5f2ea] overflow-hidden">
+            <section id="about" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-linear-to-br from-[#fdfcf9] via-[#f8f6f1] to-[#f5f2ea] overflow-hidden">
                 {/* Decorative Elements */}
                 <div className="absolute top-20 right-10 w-72 h-72 bg-[#d4af37]/5 rounded-full blur-3xl" />
                 <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#c9a552]/5 rounded-full blur-3xl" />
@@ -165,25 +171,25 @@ export default function HolmacHomepage() {
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
 
                         {/* Left: Content */}
-                        <div className={isVisible['about'] ? 'animate-left' : 'opacity-0'}>
+                        <div className={`${isVisible['about'] ? 'animate-left' : 'opacity-0'} order-last lg:order-first`}>
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#d4af37]/10 rounded-full mb-6">
                                 <Sparkles className="w-4 h-4 text-[#d4af37]" />
                                 <span className="text-[#d4af37] text-xs tracking-[0.2em] font-medium">WHO WE ARE</span>
                             </div>
 
-                            <h2 className="text-6xl font-extralight text-[#2d2416] mb-8 leading-[1.1]">
+                            <h2 className="md:text-6xl text-4xl font-extralight text-[#2d2416] mb-8 leading-[1.1]">
                                 Crafting<br />
                                 <span className="text-[#d4af37] font-light italic">Timeless</span> Elegance
                             </h2>
 
-                            <div className="space-y-6 text-[#5a4e3c] leading-relaxed mb-10">
-                                <p className="text-lg">
+                            <div className="md:space-y-6 space-y-3 text-[#5a4e3c] leading-relaxed mb-10">
+                                <p className="md:text-lg text-md">
                                     We specialize in <span className="text-[#d4af37] font-medium">premium natural wall finishes</span> inspired by traditional Venetian plaster and lime-based coatings.
                                 </p>
-                                <p>
+                                <p className="md:text-md text-sm">
                                     Our products are crafted from natural raw materials including finely crushed clay, premium lime, and mineral pigments to create rich, durable, and eco-friendly wall surfaces.
                                 </p>
-                                <p>
+                            <p className="md:text-md text-sm">
                                     Every project is a masterpiece, with <span className="font-medium text-[#2d2416]">custom color tones</span> ensuring seamless integration with your architecture and ambiance.
                                 </p>
                             </div>
@@ -204,27 +210,27 @@ export default function HolmacHomepage() {
                         </div>
 
                         {/* Right: Images Grid */}
-                        <div className={isVisible['about'] ? 'animate-right' : 'opacity-0'} style={{ animationDelay: '0.2s' }}>
+                        <div className={`${isVisible['about'] ? 'animate-right' : 'opacity-0'} order-first lg:order-last`} style={{ animationDelay: '0.2s' }}>
                             <div className="relative">
                                 {/* Main large image */}
                                 <div className="relative overflow-hidden rounded-sm shadow-2xl">
                                     <img
                                         src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=90"
                                         alt="Venetian Plaster"
-                                        className="w-full h-137.5 object-cover"
+                                        className="w-full md:h-137.5 object-cover"
                                     />
                                     <div className="absolute inset-0 bg-linear-to-t from-[#2d2416]/40 to-transparent" />
                                 </div>
 
                                 {/* Floating badge */}
-                                <div className="absolute -bottom-8 -left-8 bg-[#d4af37] text-[#2d2416] p-10 rounded-sm shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                                    <Award className="w-12 h-12 mb-3" />
-                                    <div className="text-5xl font-extralight mb-1">15+</div>
-                                    <div className="text-sm tracking-wider opacity-90">Years of Excellence</div>
+                                <div className="absolute -bottom-8 md:-left-8 -left-4 bg-[#d4af37] text-[#2d2416] p-3 md:p-10 rounded-sm shadow-2xl transform md:hover:scale-105 transition-transform duration-300">
+                                    <Award className="md:w-12 md:h-12 w-8 h-8 mb-3" />
+                                    <div className="md:text-5xl text-3xl font-extralight mb-1">15+</div>
+                                    <div className="md:text-sm text-xs tracking-wider opacity-90">Years of Excellence</div>
                                 </div>
 
                                 {/* Small floating image */}
-                                <div className="absolute -top-6 -right-6 w-48 h-48 overflow-hidden rounded-sm shadow-xl border-4 border-white">
+                                <div className="absolute -top-6 -right-6 md:w-48 md:h-48 w-34 h-34 overflow-hidden rounded-sm shadow-xl border-4 border-white">
                                     <img
                                         src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=400&q=90"
                                         alt="Detail"
@@ -238,7 +244,7 @@ export default function HolmacHomepage() {
             </section>
 
             {/* Products Section - Completely Redesigned */}
-            <section id="products" ref={addToRefs} className="relative py-40 px-6 bg-[#2d2416] overflow-hidden">
+            <section id="products" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-[#2d2416] overflow-hidden">
                 {/* Decorative pattern overlay */}
                 <div className="absolute inset-0 opacity-5" style={{
                     backgroundImage: 'radial-gradient(circle at 2px 2px, #d4af37 1px, transparent 0)',
@@ -247,22 +253,22 @@ export default function HolmacHomepage() {
 
                 <div className="max-w-7xl mx-auto relative">
                     {/* Header */}
-                    <div className="text-center mb-24">
+                    <div className="text-center md:mb-24 mb-5">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#d4af37]/10 rounded-full mb-6">
                             <Heart className="w-4 h-4 text-[#d4af37]" />
                             <span className="text-[#d4af37] text-xs tracking-[0.2em] font-medium">OUR SPECIALTIES</span>
                         </div>
 
-                        <h2 className="text-6xl font-extralight text-white mb-6 leading-tight">
+                        <h2 className="md:text-6xl text-4xl font-extralight text-white mb-6 leading-tight">
                             Premium Wall <span className="text-[#d4af37] italic">Finishes</span>
                         </h2>
-                        <p className="text-[#b8985f] max-w-2xl mx-auto text-lg">
+                        <p className="text-[#b8985f] max-w-2xl mx-auto md:text-lg">
                             Each finish is a testament to traditional craftsmanship meets modern innovation
                         </p>
                     </div>
 
                     {/* Products Cards */}
-                    <div className="grid lg:grid-cols-3 gap-10">
+                    <div className="grid lg:grid-cols-3 md:gap-10 gap-8">
                         {[
                             {
                                 title: 'Venetian Plaster',
@@ -336,16 +342,16 @@ export default function HolmacHomepage() {
             </section>
 
             {/* Gallery Section - Masonry Style */}
-            <section id="gallery" ref={addToRefs} className="relative py-40 px-6 bg-linear-to-b from-[#fdfcf9] to-[#f8f6f1]">
+            <section id="gallery" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-linear-to-b from-[#fdfcf9] to-[#f8f6f1]">
                 <div className="max-w-7xl mx-auto">
                     {/* Header */}
-                    <div className="text-center mb-24">
+                    <div className="text-center md:mb-24 mb-10">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#d4af37]/10 rounded-full mb-6">
                             <Users className="w-4 h-4 text-[#d4af37]" />
                             <span className="text-[#d4af37] text-xs tracking-[0.2em] font-medium">OUR PORTFOLIO</span>
                         </div>
 
-                        <h2 className="text-6xl font-extralight text-[#2d2416] mb-6">
+                        <h2 className="md:text-6xl text-5xl font-extralight text-[#2d2416] mb-6">
                             Recent <span className="text-[#d4af37] italic">Projects</span>
                         </h2>
                         <p className="text-[#5a4e3c] max-w-2xl mx-auto text-lg">
@@ -480,15 +486,15 @@ export default function HolmacHomepage() {
             </section>
 
             {/* Why Choose Us Section */}
-            <section className="relative py-40 px-6 bg-[#f5f2ea] overflow-hidden">
+            <section className="relative md:py-40 py-10 px-6 bg-[#f5f2ea] overflow-hidden">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-20">
-                        <h2 className="text-6xl font-extralight text-[#2d2416] mb-4">
+                        <h2 className="md:text-6xl text-5xl font-extralight text-[#2d2416] mb-4">
                             Why <span className="text-[#d4af37] italic">Choose</span> Us?
                         </h2>
                     </div>
 
-                    <div className="grid md:grid-cols-4 gap-12">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
                         {[
                             {
                                 icon: <Sparkles className="w-8 h-8" />,
@@ -512,13 +518,13 @@ export default function HolmacHomepage() {
                             }
                         ].map((feature, idx) => (
                             <div key={idx} className="group text-center">
-                                <div className="w-20 h-20 mx-auto mb-6 border-2 border-[#d4af37] rounded-sm flex items-center justify-center text-[#d4af37] group-hover:bg-[#d4af37] group-hover:text-white transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+                                <div className="md:w-20 md:h-20 w-12 h-12 mx-auto mb-6 border-2 border-[#d4af37] rounded-sm flex items-center justify-center text-[#d4af37] group-hover:bg-[#d4af37] group-hover:text-white transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
                                     {feature.icon}
                                 </div>
-                                <h3 className="text-2xl font-light text-[#2d2416] mb-4 tracking-wide">
+                                <h3 className="md:text-2xl text-lg md:font-light font-semibold text-[#2d2416] mb-4 tracking-wide">
                                     {feature.title}
                                 </h3>
-                                <p className="text-[#5a4e3c] leading-relaxed">
+                                <p className="text-[#5a4e3c] md:text-md text-sm leading-relaxed">
                                     {feature.desc}
                                 </p>
                             </div>
@@ -528,13 +534,13 @@ export default function HolmacHomepage() {
             </section>
 
             {/* Contact Section - Premium Design */}
-            <section id="contact" ref={addToRefs} className="relative py-40 px-6 bg-[#2d2416] overflow-hidden">
+            <section id="contact" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-[#2d2416] overflow-hidden">
                 {/* Decorative Elements */}
                 <div className="absolute top-0 right-0 w-125 h-125 bg-[#d4af37]/5 rounded-full blur-3xl" />
                 <div className="absolute bottom-0 left-0 w-150 h-150 bg-[#c9a552]/5 rounded-full blur-3xl" />
 
                 <div className="max-w-6xl mx-auto relative">
-                    <div className="grid lg:grid-cols-2 gap-20">
+                    <div className="grid lg:grid-cols-2 md:gap-20 gap-10">
 
                         {/* Left: Info */}
                         <div className={isVisible['contact'] ? 'animate-left' : 'opacity-0'}>
@@ -543,25 +549,25 @@ export default function HolmacHomepage() {
                                 <span className="text-[#d4af37] text-xs tracking-[0.2em] font-medium">GET IN TOUCH</span>
                             </div>
 
-                            <h2 className="text-6xl font-extralight text-white mb-8 leading-[1.1]">
+                            <h2 className="md:text-6xl text-4xl font-extralight text-white md:mb-8 mb-4 leading-[1.1]">
                                 Let's Create<br />
                                 Something <span className="text-[#d4af37] italic">Beautiful</span>
                             </h2>
 
-                            <p className="text-[#b8985f] leading-relaxed text-lg mb-16">
+                            <p className="text-[#b8985f] leading-relaxed md:text-lg md:mb-16 mb-10">
                                 Ready to transform your space? Contact us for a consultation and discover how our natural wall finishes can elevate your interiors.
                             </p>
 
                             {/* Contact Cards */}
-                            <div className="space-y-6">
-                                <div className="flex items-start gap-5 p-6 bg-[#3a2f1f] rounded-sm hover:bg-[#44352a] transition-colors duration-300">
+                            <div className="md:space-y-6 space-y-4">
+                                <div className="flex items-start gap-5 md:p-6 p-4 bg-[#3a2f1f] rounded-sm hover:bg-[#44352a] transition-colors duration-300">
                                     <div className="w-14 h-14 bg-[#d4af37]/10 rounded-sm flex items-center justify-center shrink-0">
                                         <Phone className="w-6 h-6 text-[#d4af37]" />
                                     </div>
                                     <div>
                                         <p className="text-white font-medium mb-2 tracking-wide">Call Us</p>
-                                        <p className="text-[#b8985f] mb-1">+91 9916511351</p>
-                                        <p className="text-[#b8985f]">+91 9164315156</p>
+                                        <a href="tel:+919916511351" aria-label="Call +91 9916511351" className="text-[#b8985f] mb-1 inline-block">+91 9916511351</a>
+                                        <a href="tel:+919164315156" aria-label="Call +91 9164315156" className="text-[#b8985f] inline-block">+91 9164315156</a>
                                     </div>
                                 </div>
 
@@ -571,7 +577,7 @@ export default function HolmacHomepage() {
                                     </div>
                                     <div>
                                         <p className="text-white font-medium mb-2 tracking-wide">Email</p>
-                                        <p className="text-[#b8985f]">holmac135@gmail.com</p>
+                                        <a href="mailto:holmac135@gmail.com" aria-label="Email holmac135@gmail.com" className="text-[#b8985f]">holmac135@gmail.com</a>
                                     </div>
                                 </div>
 
@@ -581,7 +587,14 @@ export default function HolmacHomepage() {
                                     </div>
                                     <div>
                                         <p className="text-white font-medium mb-2 tracking-wide">Location</p>
-                                        <p className="text-[#b8985f]">Udupi / Mangaluru, Karnataka</p>
+                                        <a
+                                            href="https://maps.app.goo.gl/occaCGDPHobXw62ZA"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-[#b8985f]"
+                                        >
+                                            Udupi / Mangaluru, Karnataka
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -589,7 +602,7 @@ export default function HolmacHomepage() {
 
                         {/* Right: Form */}
                         <div className={isVisible['contact'] ? 'animate-right' : 'opacity-0'} style={{ animationDelay: '0.2s' }}>
-                            <div className="bg-[#3a2f1f] p-10 rounded-sm">
+                            <div className="bg-[#3a2f1f] md:p-10 p-4 rounded-sm">
                                 <h3 className="text-2xl font-light text-white mb-8 tracking-wide">Send us a message</h3>
 
                                 <div className="space-y-6">
@@ -646,9 +659,9 @@ export default function HolmacHomepage() {
                 message="Hi Holmac team, I saw your website and would like to get a quote for my project."
             />
             {/* Footer */}
-            <footer className="bg-[#1a1410] text-white py-20 px-6 border-t border-[#d4af37]/10">
+            <footer className="bg-[#1a1410] text-white md:py-20 py-8 px-6 border-t border-[#d4af37]/10">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid md:grid-cols-4 gap-16 mb-16">
+                    <div className="grid md:grid-cols-4 md:gap-16 gap-10 md:mb-16 mb-6">
 
                         {/* Brand */}
                         <div>
@@ -665,22 +678,19 @@ export default function HolmacHomepage() {
 
                             {/* Social Links */}
                             <div className="flex gap-3">
-                                <a href="#" className="w-10 h-10 border border-[#d4af37]/30 hover:border-[#d4af37] hover:bg-[#d4af37]/10 flex items-center justify-center transition-all duration-300 rounded-sm group">
+                                <a href="https://www.instagram.com/holmac_interior" className="w-10 h-10 border border-[#d4af37]/30 hover:border-[#d4af37] hover:bg-[#d4af37]/10 flex items-center justify-center transition-all duration-300 rounded-sm group">
                                     <Instagram className="w-5 h-5 text-[#b8985f] group-hover:text-[#d4af37] transition-colors" />
                                 </a>
-                                <a href="#" className="w-10 h-10 border border-[#d4af37]/30 hover:border-[#d4af37] hover:bg-[#d4af37]/10 flex items-center justify-center transition-all duration-300 rounded-sm group">
+                                <a href="https://www.facebook.com/share/17rxkvn9qh/" className="w-10 h-10 border border-[#d4af37]/30 hover:border-[#d4af37] hover:bg-[#d4af37]/10 flex items-center justify-center transition-all duration-300 rounded-sm group">
                                     <Facebook className="w-5 h-5 text-[#b8985f] group-hover:text-[#d4af37] transition-colors" />
-                                </a>
-                                <a href="#" className="w-10 h-10 border border-[#d4af37]/30 hover:border-[#d4af37] hover:bg-[#d4af37]/10 flex items-center justify-center transition-all duration-300 rounded-sm group">
-                                    <Linkedin className="w-5 h-5 text-[#b8985f] group-hover:text-[#d4af37] transition-colors" />
                                 </a>
                             </div>
                         </div>
 
                         {/* Quick Links */}
                         <div>
-                            <h4 className="text-sm tracking-[0.2em] mb-6 text-[#d4af37] font-medium">QUICK LINKS</h4>
-                            <ul className="space-y-3">
+                            <h4 className="text-sm tracking-[0.2em] md:mb-6 mb-2 text-[#d4af37] font-medium">QUICK LINKS</h4>
+                            <ul className="md:space-y-3 space-y-2">
                                 <li><a href="#about" className="text-[#b8985f] hover:text-white transition-colors text-sm hover:translate-x-1 inline-block duration-300">About Us</a></li>
                                 <li><a href="#products" className="text-[#b8985f] hover:text-white transition-colors text-sm hover:translate-x-1 inline-block duration-300">Our Products</a></li>
                                 <li><a href="#gallery" className="text-[#b8985f] hover:text-white transition-colors text-sm hover:translate-x-1 inline-block duration-300">Portfolio</a></li>
@@ -714,7 +724,6 @@ export default function HolmacHomepage() {
                                 </li>
                             </ul>
                         </div>
-
                         {/* Contact Info */}
                         <div>
                             <h4 className="text-sm tracking-[0.2em] mb-6 text-[#d4af37] font-medium">REACH US</h4>
@@ -722,24 +731,32 @@ export default function HolmacHomepage() {
                                 <div className="flex items-start gap-3">
                                     <Phone className="w-4 h-4 text-[#d4af37] mt-1 shrink-0" />
                                     <div className="text-[#b8985f]">
-                                        <p>+91 9916511351</p>
-                                        <p>+91 9164315156</p>
+                                        <a href="tel:+919916511351" aria-label="Call +91 9916511351">+91 9916511351</a>
+                                        <br />
+                                        <a href="tel:+919164315156" aria-label="Call +91 9164315156">+91 9164315156</a>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
                                     <Mail className="w-4 h-4 text-[#d4af37] mt-1 shrink-0" />
-                                    <p className="text-[#b8985f]">holmac135@gmail.com</p>
+                                    <a href="mailto:holmac135@gmail.com" className="text-[#b8985f]">holmac135@gmail.com</a>
                                 </div>
                                 <div className="flex items-start gap-3">
                                     <MapPin className="w-4 h-4 text-[#d4af37] mt-1 shrink-0" />
-                                    <p className="text-[#b8985f]">Udupi / Mangaluru<br />Karnataka, India</p>
+                                    <a
+                                        href="https://maps.app.goo.gl/occaCGDPHobXw62ZA"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-[#b8985f]"
+                                    >
+                                        Udupi / Mangaluru<br />Karnataka, India
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     {/* Bottom Bar */}
-                    <div className="border-t border-[#d4af37]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div className="border-t border-[#d4af37]/10 pt-8 md:mb-0 mb-20 flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-[#b8985f] text-sm">
                             © 2024 Holmac Interior Solutions. All rights reserved.
                         </p>
