@@ -3,6 +3,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Phone, Mail, MapPin, ChevronDown, Instagram, Facebook, Linkedin, ArrowRight, Sparkles, Award, Users, Heart } from 'lucide-react';
 import WhatsAppWidget from './WatsappWidget';
 import PhoneNavbar from './PhoneNavbar';
+import CalculatorWidget from './CalculatorWidget';
+
 
 export default function HolmacHomepage() {
     const [scrollY, setScrollY] = useState(0);
@@ -654,6 +656,11 @@ export default function HolmacHomepage() {
                     </div>
                 </div>
             </section>
+            <CalculatorWidget 
+  onClick={() => console.log('Calculator clicked')}
+  label="GET FREE ESTIMATE"
+  buttonText="EMI"
+/>
             <WhatsAppWidget
                 phoneNumber="919916511351"
                 message="Hi Holmac team, I saw your website and would like to get a quote for my project."
