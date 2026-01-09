@@ -1,5 +1,4 @@
-
- 'use client';
+'use client';
 import React, { useState, useEffect, useRef } from 'react';
 
 const CalculatorWidget = ({ onClick, label = 'CALCULATE NOW', buttonText = 'EMI', outerText }) => {
@@ -46,7 +45,7 @@ const CalculatorWidget = ({ onClick, label = 'CALCULATE NOW', buttonText = 'EMI'
     <div className="fixed md:bottom-28 bottom-48 right-8 z-50 group" style={{ width: 64, height: 64 }}>
       {/* Paint stroke background */}
       <div
-        className="absolute inset-0 bg-red-500 opacity-20 blur-xl transition-transform duration-300 ease-out pointer-events-none"
+        className="absolute inset-0 bg-[#b59016] opacity-20 blur-xl transition-transform duration-300 ease-out pointer-events-none"
         style={{
           borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%',
           transform: `scale(${strokeScale}) rotate(${strokeRotation}deg)`,
@@ -60,7 +59,7 @@ const CalculatorWidget = ({ onClick, label = 'CALCULATE NOW', buttonText = 'EMI'
       {/* Button */}
       <button
         onClick={openModal}
-        className="relative cursor-pointer flex items-center justify-center w-16 h-16 bg-red-500 text-white rounded-full shadow-md transition-all duration-500 hover:scale-110 hover:rotate-12 active:scale-95"
+        className="relative cursor-pointer flex items-center justify-center w-16 h-16 bg-[#b59016] text-white rounded-full shadow-md transition-all duration-500 hover:scale-110 hover:rotate-12 active:scale-95"
         aria-label="Calculator"
       >
         {/* Calculator Icon (JSX-friendly attrs) */}
@@ -89,7 +88,7 @@ const CalculatorWidget = ({ onClick, label = 'CALCULATE NOW', buttonText = 'EMI'
         </svg>
 
         {/* Tooltip */}
-        <span className="absolute right-full mr-4 px-4 py-2 bg-gray-800 text-red-500 text-xs tracking-widest whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-sm pointer-events-none border border-red-500/30">
+        <span className="absolute right-full mr-4 px-4 py-2 bg-gray-800 text-[#d4af37] text-xs tracking-widest whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-sm pointer-events-none border border-[#d4af37]/30">
           {label}
         </span>
       </button>
@@ -113,7 +112,7 @@ const CalculatorWidget = ({ onClick, label = 'CALCULATE NOW', buttonText = 'EMI'
       </svg>
 
       {/* Decorative ring on hover */}
-      <div className="absolute -inset-2 border border-red-500/0 rounded-full group-hover:border-red-500/50 group-hover:scale-110 transition-all duration-700 pointer-events-none" />
+      <div className="absolute -inset-2 border border-[#d4af37]/0 rounded-full group-hover:border-[#d4af37]/50 group-hover:scale-110 transition-all duration-700 pointer-events-none" />
 
       {/* Modal */}
       {isModalOpen && (
@@ -154,7 +153,7 @@ const CalculatorWidget = ({ onClick, label = 'CALCULATE NOW', buttonText = 'EMI'
                     />
                   </div>
 
-                  <button onClick={handleSubmit} className="w-full mt-6 py-3 bg-[#d4af37] text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 hover:bg-[#c9a227]">GET ESTIMATION</button>
+                  <button onClick={handleSubmit} className="w-full mt-6 py-3 bg-[#b59016] text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 hover:bg-[#c9a227]">GET ESTIMATION</button>
                 </div>
               </>
           </div>

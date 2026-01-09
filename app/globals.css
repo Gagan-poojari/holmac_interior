@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
+  /* font-style: italic; */
+}
+html {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
 body.intro-active {
   overflow: hidden;
 }

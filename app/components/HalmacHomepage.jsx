@@ -95,17 +95,18 @@ export default function HolmacHomepage() {
                 style={{
                     background: scrollY > 50
                         ? 'rgba(248, 246, 241, 0.98)'
-                        : 'transparent',
+                        : 'rgba(0, 0, 0, 0.2)',
+                        // : 'transparent',
                     backdropFilter: scrollY > 50 ? 'blur(12px)' : 'none',
                     boxShadow: scrollY > 50 ? '0 4px 30px rgba(212, 175, 55, 0.08)' : 'none'
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
+                    <div className="flex logo items-center gap-3">
                         <img src="/holmac_circle.png" alt="Holmac" className="h-14 w-14" />
                         <div>
-                            <h1 className={`text-2xl font-light tracking-[0.2em] ${scrollY > 50 ? 'text-[#2d2416]' : 'text-[#ffffff]'}`}>HOLMAC</h1>
-                            <p className="text-xs text-[#b8985f] tracking-[0.3em]">INTERIOR SOLUTIONS</p>
+                            <h1 className={`text-2xl font-semibold ${scrollY > 50 ? 'text-[#b59016]' : 'text-[#ffffff]'}`}>{scrollY > 50 ? 'HOLMAC' : 'HOLMAC INTERIOR'}</h1>
+                            <p className={`text-xs tracking-[0.2em] ${scrollY > 50 ? 'text-[#b59016]' : 'text-[#fbfbfb]'}`}>{scrollY > 50 ? 'INTERIOR' : 'INNOVATIVE IDEAS, STYLISH DESIGNS'}</p>
                         </div>
                     </div>
 
@@ -130,7 +131,8 @@ export default function HolmacHomepage() {
                 <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-1000"
                     style={{
-                        backgroundImage: 'url(https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=90)',
+                        // backgroundImage: 'url(https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=90)',
+                        backgroundImage: 'url(/assets/herobg.webp)',
                         transform: `scale(${1 + scrollY * 0.0003})`,
                         filter: 'brightness(0.7)'
                     }}
@@ -141,7 +143,7 @@ export default function HolmacHomepage() {
                     <div className="overflow-hidden">
                         <h1 className="text-6xl md:text-8xl font-light text-white mb-6 tracking-wider animate-in"
                             style={{ animationDelay: '0.2s', opacity: 0 }}>
-                            Natural Wall Artistry
+                            Contemporary Interior Design 
                         </h1>
                     </div>
                     <div className="overflow-hidden">
@@ -160,186 +162,6 @@ export default function HolmacHomepage() {
 
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
                     <ChevronDown className="w-8 h-8 text-white/60" />
-                </div>
-            </section>
-
-            {/* About Section - Redesigned */}
-            <section id="about" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-linear-to-br from-[#fdfcf9] via-[#f8f6f1] to-[#f5f2ea] overflow-hidden">
-                {/* Decorative Elements */}
-                <div className="absolute top-20 right-10 w-72 h-72 bg-[#d4af37]/5 rounded-full blur-3xl" />
-                <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#c9a552]/5 rounded-full blur-3xl" />
-
-                <div className="max-w-7xl mx-auto relative">
-                    <div className="grid lg:grid-cols-2 gap-20 items-center">
-
-                        {/* Left: Content */}
-                        <div className={`${isVisible['about'] ? 'animate-left' : 'opacity-0'} order-last lg:order-first`}>
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#d4af37]/10 rounded-full mb-6">
-                                <Sparkles className="w-4 h-4 text-[#d4af37]" />
-                                <span className="text-[#d4af37] text-xs tracking-[0.2em] font-medium">WHO WE ARE</span>
-                            </div>
-
-                            <h2 className="md:text-6xl text-4xl font-extralight text-[#2d2416] mb-8 leading-[1.1]">
-                                Crafting<br />
-                                <span className="text-[#d4af37] font-light italic">Timeless</span> Elegance
-                            </h2>
-
-                            <div className="md:space-y-6 space-y-3 text-[#5a4e3c] leading-relaxed mb-10">
-                                <p className="md:text-lg text-md">
-                                    We specialize in <span className="text-[#d4af37] font-medium">premium natural wall finishes</span> inspired by traditional Venetian plaster and lime-based coatings.
-                                </p>
-                                <p className="md:text-md text-sm">
-                                    Our products are crafted from natural raw materials including finely crushed clay, premium lime, and mineral pigments to create rich, durable, and eco-friendly wall surfaces.
-                                </p>
-                            <p className="md:text-md text-sm">
-                                    Every project is a masterpiece, with <span className="font-medium text-[#2d2416]">custom color tones</span> ensuring seamless integration with your architecture and ambiance.
-                                </p>
-                            </div>
-
-                            {/* Stats */}
-                            <div className="grid grid-cols-3 gap-8">
-                                {[
-                                    { num: '15+', label: 'Years Experience' },
-                                    { num: '500+', label: 'Projects Done' },
-                                    { num: '100%', label: 'Natural Materials' }
-                                ].map((stat, idx) => (
-                                    <div key={idx} className="text-center">
-                                        <div className="text-4xl font-light text-[#d4af37] mb-2">{stat.num}</div>
-                                        <div className="text-xs text-[#5a4e3c] tracking-wider">{stat.label}</div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Right: Images Grid */}
-                        <div className={`${isVisible['about'] ? 'animate-right' : 'opacity-0'} order-first lg:order-last`} style={{ animationDelay: '0.2s' }}>
-                            <div className="relative">
-                                {/* Main large image */}
-                                <div className="relative overflow-hidden rounded-sm shadow-2xl">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=90"
-                                        alt="Venetian Plaster"
-                                        className="w-full md:h-137.5 object-cover"
-                                    />
-                                    <div className="absolute inset-0 bg-linear-to-t from-[#2d2416]/40 to-transparent" />
-                                </div>
-
-                                {/* Floating badge */}
-                                <div className="absolute -bottom-8 md:-left-8 -left-4 bg-[#d4af37] text-[#2d2416] p-3 md:p-10 rounded-sm shadow-2xl transform md:hover:scale-105 transition-transform duration-300">
-                                    <Award className="md:w-12 md:h-12 w-8 h-8 mb-3" />
-                                    <div className="md:text-5xl text-3xl font-extralight mb-1">15+</div>
-                                    <div className="md:text-sm text-xs tracking-wider opacity-90">Years of Excellence</div>
-                                </div>
-
-                                {/* Small floating image */}
-                                <div className="absolute -top-6 -right-6 md:w-48 md:h-48 w-34 h-34 overflow-hidden rounded-sm shadow-xl border-4 border-white">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=400&q=90"
-                                        alt="Detail"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Products Section - Completely Redesigned */}
-            <section id="products" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-[#2d2416] overflow-hidden">
-                {/* Decorative pattern overlay */}
-                <div className="absolute inset-0 opacity-5" style={{
-                    backgroundImage: 'radial-gradient(circle at 2px 2px, #d4af37 1px, transparent 0)',
-                    backgroundSize: '40px 40px'
-                }} />
-
-                <div className="max-w-7xl mx-auto relative">
-                    {/* Header */}
-                    <div className="text-center md:mb-24 mb-5">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#d4af37]/10 rounded-full mb-6">
-                            <Heart className="w-4 h-4 text-[#d4af37]" />
-                            <span className="text-[#d4af37] text-xs tracking-[0.2em] font-medium">OUR SPECIALTIES</span>
-                        </div>
-
-                        <h2 className="md:text-6xl text-4xl font-extralight text-white mb-6 leading-tight">
-                            Premium Wall <span className="text-[#d4af37] italic">Finishes</span>
-                        </h2>
-                        <p className="text-[#b8985f] max-w-2xl mx-auto md:text-lg">
-                            Each finish is a testament to traditional craftsmanship meets modern innovation
-                        </p>
-                    </div>
-
-                    {/* Products Cards */}
-                    <div className="grid lg:grid-cols-3 md:gap-10 gap-8">
-                        {[
-                            {
-                                title: 'Venetian Plaster',
-                                desc: 'Authentic Italian technique with luxurious marble-like finish that adds depth and sophistication',
-                                img: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&q=90',
-                                features: ['Marble Effect', 'Luxurious Finish', 'Timeless Beauty']
-                            },
-                            {
-                                title: 'Lime-Based Coating',
-                                desc: 'Breathable, eco-friendly finish perfect for modern spaces with natural texture',
-                                img: 'https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=600&q=90',
-                                features: ['Eco-Friendly', 'Breathable', 'Natural Texture']
-                            },
-                            {
-                                title: 'Textured Finishes',
-                                desc: 'Custom textures using natural clay and mineral pigments for unique character',
-                                img: 'https://images.unsplash.com/photo-1615873968403-89e068629265?w=600&q=90',
-                                features: ['Custom Design', 'Mineral Pigments', 'Unique Patterns']
-                            }
-                        ].map((product, idx) => (
-                            <div
-                                key={idx}
-                                className={`group ${isVisible['products'] ? 'animate-scale' : 'opacity-0'}`}
-                                style={{ animationDelay: `${idx * 0.15}s` }}
-                                onMouseEnter={() => setHoveredProduct(idx)}
-                                onMouseLeave={() => setHoveredProduct(null)}
-                            >
-                                <div className="relative bg-[#3a2f1f] rounded-sm overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-                                    {/* Image */}
-                                    <div className="relative h-80 overflow-hidden">
-                                        <img
-                                            src={product.img}
-                                            alt={product.title}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                        />
-                                        <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-transparent to-transparent opacity-60" />
-
-                                        {/* Hover overlay */}
-                                        <div className={`absolute inset-0 bg-[#d4af37]/20 transition-opacity duration-500 ${hoveredProduct === idx ? 'opacity-100' : 'opacity-0'}`} />
-                                    </div>
-
-                                    {/* Content */}
-                                    <div className="p-8">
-                                        <h3 className="text-3xl font-light text-white mb-4 group-hover:text-[#d4af37] transition-colors duration-300">
-                                            {product.title}
-                                        </h3>
-                                        <p className="text-[#b8985f] leading-relaxed mb-6">
-                                            {product.desc}
-                                        </p>
-
-                                        {/* Features */}
-                                        <div className="flex flex-wrap gap-2 mb-6">
-                                            {product.features.map((feature, i) => (
-                                                <span key={i} className="px-3 py-1 bg-[#d4af37]/10 text-[#d4af37] text-xs tracking-wider rounded-full">
-                                                    {feature}
-                                                </span>
-                                            ))}
-                                        </div>
-
-                                        {/* Button */}
-                                        <button className="flex items-center gap-2 text-[#d4af37] text-sm tracking-wider group-hover:gap-4 transition-all duration-300">
-                                            Learn More
-                                            <ArrowRight className="w-4 h-4" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
                 </div>
             </section>
 
@@ -483,6 +305,186 @@ export default function HolmacHomepage() {
                         <button className="px-12 py-4 border-2 border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-all duration-300 tracking-widest text-sm font-medium rounded-sm hover:shadow-xl hover:-translate-y-1">
                             VIEW COMPLETE GALLERY
                         </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* About Section - Redesigned */}
+            <section id="about" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-linear-to-br from-[#fdfcf9] via-[#f8f6f1] to-[#f5f2ea] overflow-hidden">
+                {/* Decorative Elements */}
+                <div className="absolute top-20 right-10 w-72 h-72 bg-[#d4af37]/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#c9a552]/5 rounded-full blur-3xl" />
+
+                <div className="max-w-7xl mx-auto relative">
+                    <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+                        {/* Left: Content */}
+                        <div className={`${isVisible['about'] ? 'animate-left' : 'opacity-0'} order-last lg:order-first`}>
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#d4af37]/10 rounded-full mb-6">
+                                <Sparkles className="w-4 h-4 text-[#d4af37]" />
+                                <span className="text-[#d4af37] text-xs tracking-[0.2em] font-medium">WHO WE ARE</span>
+                            </div>
+
+                            <h2 className="md:text-6xl text-4xl font-extralight text-[#2d2416] mb-8 leading-[1.1]">
+                                Crafting<br />
+                                <span className="text-[#d4af37] font-light italic">Timeless</span> Elegance
+                            </h2>
+
+                            <div className="md:space-y-6 space-y-3 text-[#5a4e3c] leading-relaxed mb-10">
+                                <p className="md:text-lg text-md">
+                                    We specialize in <span className="text-[#d4af37] font-medium">premium natural wall finishes</span> inspired by traditional Venetian plaster and lime-based coatings.
+                                </p>
+                                <p className="md:text-md text-sm">
+                                    Our products are crafted from natural raw materials including finely crushed clay, premium lime, and mineral pigments to create rich, durable, and eco-friendly wall surfaces.
+                                </p>
+                                <p className="md:text-md text-sm">
+                                    Every project is a masterpiece, with <span className="font-medium text-[#2d2416]">custom color tones</span> ensuring seamless integration with your architecture and ambiance.
+                                </p>
+                            </div>
+
+                            {/* Stats */}
+                            <div className="grid grid-cols-3 gap-8">
+                                {[
+                                    { num: '15+', label: 'Years Experience' },
+                                    { num: '500+', label: 'Projects Done' },
+                                    { num: '100%', label: 'Natural Materials' }
+                                ].map((stat, idx) => (
+                                    <div key={idx} className="text-center">
+                                        <div className="text-4xl font-light text-[#d4af37] mb-2">{stat.num}</div>
+                                        <div className="text-xs text-[#5a4e3c] tracking-wider">{stat.label}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Right: Images Grid */}
+                        <div className={`${isVisible['about'] ? 'animate-right' : 'opacity-0'} order-first lg:order-last`} style={{ animationDelay: '0.2s' }}>
+                            <div className="relative">
+                                {/* Main large image */}
+                                <div className="relative overflow-hidden rounded-sm shadow-2xl">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=90"
+                                        alt="Venetian Plaster"
+                                        className="w-full md:h-137.5 object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-linear-to-t from-[#2d2416]/40 to-transparent" />
+                                </div>
+
+                                {/* Floating badge */}
+                                <div className="absolute -bottom-8 md:-left-8 -left-4 bg-[#d4af37] text-[#2d2416] p-3 md:p-10 rounded-sm shadow-2xl transform md:hover:scale-105 transition-transform duration-300">
+                                    <Award className="md:w-12 md:h-12 w-8 h-8 mb-3" />
+                                    <div className="md:text-5xl text-3xl font-extralight mb-1">15+</div>
+                                    <div className="md:text-sm text-xs tracking-wider opacity-90">Years of Excellence</div>
+                                </div>
+
+                                {/* Small floating image */}
+                                <div className="absolute -top-6 -right-6 md:w-48 md:h-48 w-34 h-34 overflow-hidden rounded-sm shadow-xl border-4 border-white">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=400&q=90"
+                                        alt="Detail"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Products Section - Completely Redesigned */}
+            <section id="products" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-[#2d2416] overflow-hidden">
+                {/* Decorative pattern overlay */}
+                <div className="absolute inset-0 opacity-5" style={{
+                    backgroundImage: 'radial-gradient(circle at 2px 2px, #d4af37 1px, transparent 0)',
+                    backgroundSize: '40px 40px'
+                }} />
+
+                <div className="max-w-7xl mx-auto relative">
+                    {/* Header */}
+                    <div className="text-center md:mb-24 mb-5">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#d4af37]/10 rounded-full mb-6">
+                            <Heart className="w-4 h-4 text-[#d4af37]" />
+                            <span className="text-[#d4af37] text-xs tracking-[0.2em] font-medium">OUR SPECIALTIES</span>
+                        </div>
+
+                        <h2 className="md:text-6xl text-4xl font-extralight text-white mb-6 leading-tight">
+                            Natural Wall <span className="text-[#d4af37] italic">Artistry</span>
+                        </h2>
+                        <p className="text-[#b8985f] max-w-2xl mx-auto md:text-lg">
+                            Each finish is a testament to traditional craftsmanship meets modern innovation
+                        </p>
+                    </div>
+
+                    {/* Products Cards */}
+                    <div className="grid lg:grid-cols-3 md:gap-10 gap-8">
+                        {[
+                            {
+                                title: 'Venetian Plaster',
+                                desc: 'Authentic Italian technique with luxurious marble-like finish that adds depth and sophistication',
+                                img: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&q=90',
+                                features: ['Marble Effect', 'Luxurious Finish', 'Timeless Beauty']
+                            },
+                            {
+                                title: 'Lime-Based Coating',
+                                desc: 'Breathable, eco-friendly finish perfect for modern spaces with natural texture',
+                                img: 'https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=600&q=90',
+                                features: ['Eco-Friendly', 'Breathable', 'Natural Texture']
+                            },
+                            {
+                                title: 'Textured Finishes',
+                                desc: 'Custom textures using natural clay and mineral pigments for unique character',
+                                img: 'https://images.unsplash.com/photo-1615873968403-89e068629265?w=600&q=90',
+                                features: ['Custom Design', 'Mineral Pigments', 'Unique Patterns']
+                            }
+                        ].map((product, idx) => (
+                            <div
+                                key={idx}
+                                className={`group ${isVisible['products'] ? 'animate-scale' : 'opacity-0'}`}
+                                style={{ animationDelay: `${idx * 0.15}s` }}
+                                onMouseEnter={() => setHoveredProduct(idx)}
+                                onMouseLeave={() => setHoveredProduct(null)}
+                            >
+                                <div className="relative bg-[#3a2f1f] rounded-sm overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                                    {/* Image */}
+                                    <div className="relative h-80 overflow-hidden">
+                                        <img
+                                            src={product.img}
+                                            alt={product.title}
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-transparent to-transparent opacity-60" />
+
+                                        {/* Hover overlay */}
+                                        <div className={`absolute inset-0 bg-[#d4af37]/20 transition-opacity duration-500 ${hoveredProduct === idx ? 'opacity-100' : 'opacity-0'}`} />
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className="p-8">
+                                        <h3 className="text-3xl font-light text-white mb-4 group-hover:text-[#d4af37] transition-colors duration-300">
+                                            {product.title}
+                                        </h3>
+                                        <p className="text-[#b8985f] leading-relaxed mb-6">
+                                            {product.desc}
+                                        </p>
+
+                                        {/* Features */}
+                                        <div className="flex flex-wrap gap-2 mb-6">
+                                            {product.features.map((feature, i) => (
+                                                <span key={i} className="px-3 py-1 bg-[#d4af37]/10 text-[#d4af37] text-xs tracking-wider rounded-full">
+                                                    {feature}
+                                                </span>
+                                            ))}
+                                        </div>
+
+                                        {/* Button */}
+                                        <button className="flex items-center gap-2 text-[#d4af37] text-sm tracking-wider group-hover:gap-4 transition-all duration-300">
+                                            Learn More
+                                            <ArrowRight className="w-4 h-4" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -656,11 +658,11 @@ export default function HolmacHomepage() {
                     </div>
                 </div>
             </section>
-            <CalculatorWidget 
-  onClick={() => console.log('Calculator clicked')}
-  label="GET FREE ESTIMATE"
-  buttonText="EMI"
-/>
+            <CalculatorWidget
+                onClick={() => console.log('Calculator clicked')}
+                label="GET FREE ESTIMATE"
+                buttonText="EMI"
+            />
             <WhatsAppWidget
                 phoneNumber="919916511351"
                 message="Hi Holmac team, I saw your website and would like to get a quote for my project."
