@@ -181,13 +181,13 @@ export default function HolmacHomepage() {
 
                 <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
                     <div className="overflow-hidden">
-                        <h1 className="text-6xl md:text-8xl font-light text-white mb-6 tracking-wider animate-in"
+                        <h1 className="text-4xl md:text-8xl font-light text-white mb-6 tracking-wider animate-in"
                             style={{ animationDelay: '0.2s', opacity: 0 }}>
                             Contemporary Interior Design
                         </h1>
                     </div>
                     <div className="overflow-hidden">
-                        <p className="text-xl md:text-2xl text-white/90 mb-12 font-light tracking-wide animate-in"
+                        <p className="text-lg md:text-2xl text-white/90 mb-12 font-light tracking-wide animate-in"
                             style={{ animationDelay: '0.4s', opacity: 0 }}>
                             Premium Venetian Plaster & Lime-Based Coatings
                         </p>

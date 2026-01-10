@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, Home, Phone, Mail, MapPin, ArrowRight, Award, Heart, X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function IndependentHouse() {
     const [isVisible, setIsVisible] = useState({});
@@ -169,7 +170,7 @@ export default function IndependentHouse() {
                     <div className="mb-8 flex items-center gap-2.5 text-xs text-[#6b6257] font-light tracking-wide">
                         <a href="/" className="hover:text-[#d4af37] transition-colors">Home</a>
                         <span className="text-[#d4af37]">•</span>
-                        <a href="/gallery" className="hover:text-[#d4af37] transition-colors">Gallery</a>
+                        <a href="#" className="hover:text-[#d4af37] transition-colors">Gallery</a>
                         <span className="text-[#d4af37]">•</span>
                         <span className="text-[#d4af37]">Independent House</span>
                     </div>
@@ -326,12 +327,14 @@ export default function IndependentHouse() {
                             Call Now
                         </a>
                         <a 
-                            href="mailto:holmac135@gmail.com"
+                            href="https://wa.me/919916511351"
+                            target="_blank"
+                            rel="noreferrer"
                             className="inline-flex items-center gap-3 px-10 py-4 bg-transparent border border-[#d4af37]/50 text-[#d4af37] hover:bg-[#d4af37] hover:text-[#2d2416] transition-all duration-300 text-sm tracking-widest font-medium w-full sm:w-auto justify-center group"
                             style={{ borderRadius: '2px' }}
                         >
-                            <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                            Send Email
+                            <FaWhatsapp className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                            Connect Now
                         </a>
                     </div>
 
