@@ -44,6 +44,23 @@ export default function HolmacHomepage() {
         }
     };
 
+    const navItems = [
+        { id: 'about', label: 'ABOUT' },
+        { id: 'products', label: 'PRODUCTS' },
+        { id: 'gallery', label: 'GALLERY' },
+        { id: 'contact', label: 'CONTACT' }
+    ];
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            const offsetTop = element.offsetTop - 80;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
@@ -96,7 +113,7 @@ export default function HolmacHomepage() {
                     background: scrollY > 50
                         ? 'rgba(248, 246, 241, 0.98)'
                         : 'rgba(0, 0, 0, 0.2)',
-                        // : 'transparent',
+                    // : 'transparent',
                     backdropFilter: scrollY > 50 ? 'blur(12px)' : 'none',
                     boxShadow: scrollY > 50 ? '0 4px 30px rgba(212, 175, 55, 0.08)' : 'none'
                 }}
@@ -111,12 +128,35 @@ export default function HolmacHomepage() {
                     </div>
 
                     <div className="hidden md:flex items-center gap-10">
-                        <a href="#about" className={`${scrollY > 50 ? 'text-[#2d2416]' : 'text-[#ffffff]'} relative befaft smooth hover:text-[#d4af37] transition-all duration-300 text-sm tracking-wider font-light`}>About</a>
+                        {navItems.map((item, index) => {
+                            return (
+                                <button
+                                    key={item.id}
+                                    onClick={() => scrollToSection(item.id)}
+                                    className="relative flex flex-col items-center gap-1.5 px-4 py-2.5 rounded-2xl focus:outline-none cursor-pointer"
+                                    style={{
+                                        transition: 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                                        transitionDelay: `${index * 0.05}s`
+                                    }}
+                                >
+                                    <span
+                                        className={`
+                      transition-all duration-400
+                      ${scrollY > 50 ? 'text-[#2d2416]' : 'text-[#ffffff]'} 
+                      relative befaft smooth hover:text-[#d4af37] transition-all duration-300 text-sm tracking-wider font-light
+                    `}
+                                    >
+                                        {item.label}
+                                    </span>
+                                </button>
+                            )
+                        })}
+                        {/* <a href="#about" className={`${scrollY > 50 ? 'text-[#2d2416]' : 'text-[#ffffff]'} relative befaft smooth hover:text-[#d4af37] transition-all duration-300 text-sm tracking-wider font-light`}>About</a>
                         <a href="#products" className={`${scrollY > 50 ? 'text-[#2d2416]' : 'text-[#ffffff]'} relative befaft smooth hover:text-[#d4af37] transition-all duration-300 text-sm tracking-wider font-light`}>Products</a>
                         <a href="#gallery" className={`${scrollY > 50 ? 'text-[#2d2416]' : 'text-[#ffffff]'} relative befaft smooth hover:text-[#d4af37] transition-all duration-300 text-sm tracking-wider font-light`}>Gallery</a>
                         <a href="#contact" className={`${scrollY > 50 ? 'text-[#2d2416]' : 'text-[#ffffff]'} relative befaft smooth px-8 py-3 bg-[#d4af37] text-sm tracking-wider font-medium hover:bg-[#e6c255] transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5`}>
                             Get in Touch
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </nav>
@@ -143,7 +183,7 @@ export default function HolmacHomepage() {
                     <div className="overflow-hidden">
                         <h1 className="text-6xl md:text-8xl font-light text-white mb-6 tracking-wider animate-in"
                             style={{ animationDelay: '0.2s', opacity: 0 }}>
-                            Contemporary Interior Design 
+                            Contemporary Interior Design
                         </h1>
                     </div>
                     <div className="overflow-hidden">
@@ -153,9 +193,9 @@ export default function HolmacHomepage() {
                         </p>
                     </div>
                     <div className="overflow-hidden">
-                        <button className="px-10 py-4 bg-[#d4af37] text-white text-sm tracking-widest hover:bg-white hover:text-[#2a1f00] transition-all duration-300 hover:shadow-2xl animate-in"
+                        <button className="px-10 py-4 bg-[#d4af37] text-white text-sm tracking-widest animate-in"
                             style={{ animationDelay: '0.6s', opacity: 0 }}>
-                            EXPLORE OUR WORK
+                            EXPLORE OUR WORK BELOW
                         </button>
                     </div>
                 </div>
@@ -678,7 +718,7 @@ export default function HolmacHomepage() {
                                 <img src="/holmac_circle.png" alt="Holmac" className="h-12 w-12" />
                                 <div>
                                     <h3 className="text-xl font-light tracking-[0.2em]">HOLMAC</h3>
-                                    <p className="text-xs text-[#b8985f] tracking-[0.3em]">INTERIOR SOLUTIONS</p>
+                                    <p className="text-xs text-[#b8985f] tracking-[0.3em]">INTERIOR</p>
                                 </div>
                             </div>
                             <p className="text-[#b8985f] text-sm leading-relaxed mb-6">
@@ -767,7 +807,7 @@ export default function HolmacHomepage() {
                     {/* Bottom Bar */}
                     <div className="border-t border-[#d4af37]/10 pt-8 md:mb-0 mb-20 flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-[#b8985f] text-sm">
-                            © 2024 Holmac Interior Solutions. All rights reserved.
+                            © {new Date().getFullYear()} Holmac Interior. All rights reserved.
                         </p>
                         <div className="flex gap-6 text-sm text-[#b8985f]">
                             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
