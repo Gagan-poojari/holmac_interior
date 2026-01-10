@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState, useRef } from 'react';
-import { Phone, Mail, MapPin, ChevronDown, Instagram, Facebook, Linkedin, ArrowRight, Sparkles, Award, Users, Heart } from 'lucide-react';
+import { Phone, Mail, MapPin, ChevronDown, Instagram, Facebook, Linkedin, ArrowRight, Sparkles, Award, Users, Heart, Warehouse, Home, Building2 } from 'lucide-react';
 import WhatsAppWidget from './WatsappWidget';
 import PhoneNavbar from './PhoneNavbar';
 import CalculatorWidget from './CalculatorWidget';
@@ -205,149 +205,190 @@ export default function HolmacHomepage() {
                 </div>
             </section>
 
-            {/* Gallery Section - Masonry Style */}
-            <section id="gallery" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-linear-to-b from-[#fdfcf9] to-[#f8f6f1]">
-                <div className="max-w-7xl mx-auto">
-                    {/* Header */}
-                    <div className="text-center md:mb-24 mb-10">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#d4af37]/10 rounded-full mb-6">
-                            <Users className="w-4 h-4 text-[#d4af37]" />
-                            <span className="text-[#d4af37] text-xs tracking-[0.2em] font-medium">OUR PORTFOLIO</span>
-                        </div>
+            {/* Gallery Section - Service Categories */}
+<section id="gallery" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-linear-to-b from-[#fdfcf9] to-[#f8f6f1]">
+    <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center md:mb-24 mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#d4af37]/10 rounded-full mb-6">
+                <Users className="w-4 h-4 text-[#d4af37]" />
+                <span className="text-[#d4af37] text-xs tracking-[0.2em] font-medium">OUR EXPERTISE</span>
+            </div>
 
-                        <h2 className="md:text-6xl text-5xl font-extralight text-[#2d2416] mb-6">
-                            Recent <span className="text-[#d4af37] italic">Projects</span>
-                        </h2>
-                        <p className="text-[#5a4e3c] max-w-2xl mx-auto text-lg">
-                            Explore our curated collection of transformative spaces
+            <h2 className="md:text-6xl text-5xl font-extralight text-[#2d2416] mb-6">
+                Design <span className="text-[#d4af37] italic">Solutions</span>
+            </h2>
+            <p className="text-[#5a4e3c] max-w-2xl mx-auto text-lg">
+                Transforming spaces with our signature blend of elegance and functionality
+            </p>
+        </div>
+
+        {/* Service Categories Grid */}
+        <div className="grid md:grid-cols-2 gap-8">
+            {/* Independent House */}
+            <a 
+                href="/gallery/independenthouse"
+                className={`group relative overflow-hidden rounded-sm cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`}
+                style={{ animationDelay: '0s' }}
+            >
+                <div className="relative h-100 md:h-125 overflow-hidden">
+                    <img
+                        src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=90"
+                        alt="Independent House Interior Design"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-[#2d2416]/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                    
+                    {/* Category Badge */}
+                    <div className="absolute top-6 left-6">
+                        <div className="px-4 py-2 bg-[#d4af37] rounded-full">
+                            <Home className="w-5 h-5 text-[#2d2416] inline-block mr-2" />
+                            <span className="text-[#2d2416] text-xs tracking-wider font-medium">INDEPENDENT HOUSE</span>
+                        </div>
+                    </div>
+
+                    {/* Content Overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 className="text-white text-3xl md:text-4xl font-light mb-3 tracking-wide">
+                            Independent House
+                        </h3>
+                        <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
+                            Complete home transformations with custom Venetian plaster and natural finishes
                         </p>
-                    </div>
-
-                    {/* Masonry Grid with Screenshot Layout */}
-                    <div className="grid grid-cols-6 gap-4 auto-rows-[200px]">
-                        {/* Row 1 */}
-                        <div className={`col-span-2 row-span-1 relative overflow-hidden rounded-sm group cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`}>
-                            <img
-                                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=90"
-                                alt="Modern Villa"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-500" />
-                            <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                <h4 className="text-white text-xl font-light mb-2">Modern Villa</h4>
-                                <div className="flex items-center gap-2 text-[#d4af37] text-sm">
-                                    <span>View Project</span>
-                                    <ArrowRight className="w-4 h-4" />
-                                </div>
-                            </div>
+                        <div className="flex items-center gap-3 text-[#d4af37] text-sm font-medium tracking-wider">
+                            <span>EXPLORE DESIGNS</span>
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
                         </div>
-
-                        <div className={`col-span-2 row-span-2 relative overflow-hidden rounded-sm group cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
-                            <img
-                                src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=600&q=90"
-                                alt="Classic Study"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-500" />
-                            <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                <h4 className="text-white text-xl font-light mb-2">Classic Study</h4>
-                                <div className="flex items-center gap-2 text-[#d4af37] text-sm">
-                                    <span>View Project</span>
-                                    <ArrowRight className="w-4 h-4" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className={`col-span-2 row-span-1 relative overflow-hidden rounded-sm group cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
-                            <img
-                                src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=600&q=90"
-                                alt="Elegant Bedroom"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-500" />
-                            <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                <h4 className="text-white text-xl font-light mb-2">Elegant Bedroom</h4>
-                                <div className="flex items-center gap-2 text-[#d4af37] text-sm">
-                                    <span>View Project</span>
-                                    <ArrowRight className="w-4 h-4" />
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Row 2 */}
-                        <div className={`col-span-2 row-span-2 relative overflow-hidden rounded-sm group cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
-                            <img
-                                src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&q=90"
-                                alt="Luxury Lounge"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-500" />
-                            <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                <h4 className="text-white text-xl font-light mb-2">Luxury Lounge</h4>
-                                <div className="flex items-center gap-2 text-[#d4af37] text-sm">
-                                    <span>View Project</span>
-                                    <ArrowRight className="w-4 h-4" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className={`col-span-2 row-span-1 relative overflow-hidden rounded-sm group cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
-                            <img
-                                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=90"
-                                alt="Boutique Hotel"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-500" />
-                            <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                <h4 className="text-white text-xl font-light mb-2">Boutique Hotel</h4>
-                                <div className="flex items-center gap-2 text-[#d4af37] text-sm">
-                                    <span>View Project</span>
-                                    <ArrowRight className="w-4 h-4" />
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Row 3 */}
-                        <div className={`col-span-2 row-span-2 relative overflow-hidden rounded-sm group cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`} style={{ animationDelay: '0.5s' }}>
-                            <img
-                                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=90"
-                                alt="Private Residence"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-500" />
-                            <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                <h4 className="text-white text-xl font-light mb-2">Private Residence</h4>
-                                <div className="flex items-center gap-2 text-[#d4af37] text-sm">
-                                    <span>View Project</span>
-                                    <ArrowRight className="w-4 h-4" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className={`col-span-2 row-span-1 relative overflow-hidden rounded-sm group cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`} style={{ animationDelay: '0.6s' }}>
-                            <img
-                                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=90"
-                                alt="Contemporary Space"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-500" />
-                            <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                <h4 className="text-white text-xl font-light mb-2">Contemporary Space</h4>
-                                <div className="flex items-center gap-2 text-[#d4af37] text-sm">
-                                    <span>View Project</span>
-                                    <ArrowRight className="w-4 h-4" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="text-center mt-16">
-                        <button className="px-12 py-4 border-2 border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-all duration-300 tracking-widest text-sm font-medium rounded-sm hover:shadow-xl hover:-translate-y-1">
-                            VIEW COMPLETE GALLERY
-                        </button>
                     </div>
                 </div>
-            </section>
+            </a>
+
+            {/* Apartment Interior */}
+            <a 
+                href="/gallery/apartment"
+                className={`group relative overflow-hidden rounded-sm cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`}
+                style={{ animationDelay: '0.1s' }}
+            >
+                <div className="relative h-100 md:h-125 overflow-hidden">
+                    <img
+                        src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=800&q=90"
+                        alt="Apartment Interior Design"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-[#2d2416]/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                    
+                    {/* Category Badge */}
+                    <div className="absolute top-6 left-6">
+                        <div className="px-4 py-2 bg-[#d4af37] rounded-full">
+                            <Building2 className="w-5 h-5 text-[#2d2416] inline-block mr-2" />
+                            <span className="text-[#2d2416] text-xs tracking-wider font-medium">APARTMENT</span>
+                        </div>
+                    </div>
+
+                    {/* Content Overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 className="text-white text-3xl md:text-4xl font-light mb-3 tracking-wide">
+                            Apartment Interior
+                        </h3>
+                        <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
+                            Maximizing space with elegant lime-based coatings and textured finishes
+                        </p>
+                        <div className="flex items-center gap-3 text-[#d4af37] text-sm font-medium tracking-wider">
+                            <span>EXPLORE DESIGNS</span>
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            {/* Farm House */}
+            <a 
+                href="/gallery/farmhouse"
+                className={`group relative overflow-hidden rounded-sm cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`}
+                style={{ animationDelay: '0.2s' }}
+            >
+                <div className="relative h-100 md:h-125 overflow-hidden">
+                    <img
+                        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=90"
+                        alt="Farm House Interior Design"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-[#2d2416]/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                    
+                    {/* Category Badge */}
+                    <div className="absolute top-6 left-6">
+                        <div className="px-4 py-2 bg-[#d4af37] rounded-full">
+                            <Warehouse className="w-5 h-5 text-[#2d2416] inline-block mr-2" />
+                            <span className="text-[#2d2416] text-xs tracking-wider font-medium">FARM HOUSE</span>
+                        </div>
+                    </div>
+
+                    {/* Content Overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 className="text-white text-3xl md:text-4xl font-light mb-3 tracking-wide">
+                            Farm House
+                        </h3>
+                        <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
+                            Rustic elegance meets modern luxury with eco-friendly natural materials
+                        </p>
+                        <div className="flex items-center gap-3 text-[#d4af37] text-sm font-medium tracking-wider">
+                            <span>EXPLORE DESIGNS</span>
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            {/* Contemporary Interior */}
+            <a 
+                href="/gallery/contemporary"
+                className={`group relative overflow-hidden rounded-sm cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`}
+                style={{ animationDelay: '0.3s' }}
+            >
+                <div className="relative h-100 md:h-125 overflow-hidden">
+                    <img
+                        src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=90"
+                        alt="Contemporary Interior Design"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-[#2d2416]/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                    
+                    {/* Category Badge */}
+                    <div className="absolute top-6 left-6">
+                        <div className="px-4 py-2 bg-[#d4af37] rounded-full">
+                            <Sparkles className="w-5 h-5 text-[#2d2416] inline-block mr-2" />
+                            <span className="text-[#2d2416] text-xs tracking-wider font-medium">CONTEMPORARY</span>
+                        </div>
+                    </div>
+
+                    {/* Content Overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 className="text-white text-3xl md:text-4xl font-light mb-3 tracking-wide">
+                            Contemporary Design
+                        </h3>
+                        <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
+                            Sleek, modern aesthetics with premium plaster and mineral pigments
+                        </p>
+                        <div className="flex items-center gap-3 text-[#d4af37] text-sm font-medium tracking-wider">
+                            <span>EXPLORE DESIGNS</span>
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+            <p className="text-[#5a4e3c] mb-6 text-lg">
+                Can't find what you're looking for?
+            </p>
+            <button className="px-12 py-4 border-2 border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-all duration-300 tracking-widest text-sm font-medium rounded-sm hover:shadow-xl hover:-translate-y-1">
+                VIEW ALL PROJECTS
+            </button>
+        </div>
+    </div>
+</section>
 
             {/* About Section - Redesigned */}
             <section id="about" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-linear-to-br from-[#fdfcf9] via-[#f8f6f1] to-[#f5f2ea] overflow-hidden">
