@@ -161,8 +161,8 @@ export default function IndependentHouse() {
                     <div className="flex items-center gap-3">
                         <img src="/holmac_circle.png" alt="Holmac" className="h-11 w-11 opacity-90" />
                         <div className="hidden sm:block">
-                            <h1 className="text-base font-medium text-[#2d2416] tracking-wide">HOLMAC</h1>
-                            <p className="text-xs tracking-widest text-[#b59016] font-light">INTERIOR</p>
+                            <h1 className="logofont text-base font-medium text-[#2d2416] tracking-wide">HOLMAC</h1>
+                            <p className="logofont text-xs tracking-widest text-[#b59016] font-light">INTERIOR</p>
                         </div>
                     </div>
                 </div>
