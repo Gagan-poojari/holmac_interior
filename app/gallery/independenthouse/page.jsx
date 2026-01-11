@@ -50,7 +50,7 @@ export default function IndependentHouse() {
     };
 
     const galleryImages = [
-        { id: 1, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119793/indepented14_ph3oj0.jpg', title: 'Living Room', description: 'Venetian plaster with warm earth tones', span: 'row-span-2' },
+        { id: 1, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119793/indepented14_ph3oj0.jpg', title: '', description: '', span: 'row-span-2' },
         { id: 2, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119781/indepented1_lb6cba.jpg', title: 'Kitchen', description: 'Contemporary lime-based finish', span: 'row-span-1' },
         { id: 3, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119784/indepented7_gadfqo.jpg', title: 'Master Bedroom', description: 'Soft textured walls with natural pigments', span: 'row-span-1' },
         { id: 4, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119785/indepented3_heephv.jpg', title: 'Bathroom', description: 'Water-resistant natural coating', span: 'row-span-2' },
