@@ -50,18 +50,22 @@ export default function IndependentHouse() {
     };
 
     const galleryImages = [
-        { id: 1, url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&q=90', title: 'Living Room', description: 'Venetian plaster with warm earth tones', span: 'row-span-2' },
-        { id: 2, url: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1600&q=90', title: 'Kitchen', description: 'Contemporary lime-based finish', span: 'row-span-1' },
-        { id: 3, url: 'https://images.unsplash.com/photo-1615873968403-89e068629265?w=1600&q=90', title: 'Master Bedroom', description: 'Soft textured walls with natural pigments', span: 'row-span-1' },
-        { id: 4, url: 'https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=1600&q=90', title: 'Bathroom', description: 'Water-resistant natural coating', span: 'row-span-2' },
-        { id: 5, url: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1600&q=90', title: 'Dining Area', description: 'Classic marmorino technique', span: 'row-span-1' },
-        { id: 6, url: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1600&q=90', title: 'Study Room', description: 'Deep charcoal plaster finish', span: 'row-span-1' },
-        { id: 7, url: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&q=90', title: 'Entrance Hall', description: 'Grand architectural detailing', span: 'row-span-2' },
-        { id: 8, url: 'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=1600&q=90', title: 'Balcony', description: 'Exterior lime wash application', span: 'row-span-1' },
-        { id: 9, url: 'https://images.unsplash.com/photo-1615529328331-f8917597711f?w=1600&q=90', title: 'Guest Room', description: 'Subtle texture with mineral accents', span: 'row-span-1' },
-        { id: 10, url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=90', title: 'Corridor', description: 'Seamless wall-to-ceiling flow', span: 'row-span-2' },
-        { id: 11, url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=90', title: 'Terrace', description: 'Weather-resistant natural finish', span: 'row-span-1' },
-        { id: 12, url: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1600&q=90', title: 'Courtyard', description: 'Indoor-outdoor harmony', span: 'row-span-1' }
+        { id: 1, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119793/indepented14_ph3oj0.jpg', title: 'Living Room', description: 'Venetian plaster with warm earth tones', span: 'row-span-2' },
+        { id: 2, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119781/indepented1_lb6cba.jpg', title: 'Kitchen', description: 'Contemporary lime-based finish', span: 'row-span-1' },
+        { id: 3, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119784/indepented7_gadfqo.jpg', title: 'Master Bedroom', description: 'Soft textured walls with natural pigments', span: 'row-span-1' },
+        { id: 4, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119785/indepented3_heephv.jpg', title: 'Bathroom', description: 'Water-resistant natural coating', span: 'row-span-2' },
+        { id: 5, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119785/indepented3_heephv.jpg', title: 'Dining Area', description: 'Classic marmorino technique', span: 'row-span-1' },
+        { id: 6, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119785/indepented3_heephv.jpg', title: 'Study Room', description: 'Deep charcoal plaster finish', span: 'row-span-1' },
+        { id: 7, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119789/indepented9_usd0lq.jpg', title: 'Entrance Hall', description: 'Grand architectural detailing', span: 'row-span-2' },
+        { id: 8, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119789/indepented8_r0llrd.jpg', title: 'Balcony', description: 'Exterior lime wash application', span: 'row-span-1' },
+        { id: 9, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119789/indepented10_kglkmn.jpg', title: 'Guest Room', description: 'Subtle texture with mineral accents', span: 'row-span-1' },
+        { id: 10, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119790/indepented4_mlozf6.jpg', title: 'Corridor', description: 'Seamless wall-to-ceiling flow', span: 'row-span-2' },
+        { id: 11, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119792/indepented11_lwlh8i.jpg', title: 'Terrace', description: 'Weather-resistant natural finish', span: 'row-span-1' },
+        { id: 12, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119792/indepented13_drfdq9.jpg', title: 'Courtyard', description: 'Indoor-outdoor harmony', span: 'row-span-1' },
+         { id: 13, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119792/indepented12_gzjjy1.jpg', title: 'Guest Room', description: 'Subtle texture with mineral accents', span: 'row-span-1' },
+        { id: 14, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119793/indepented14_ph3oj0.jpg', title: 'Corridor', description: 'Seamless wall-to-ceiling flow', span: 'row-span-2' },
+        { id: 15, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119805/indepented5_jgvx8u.jpg', title: 'Terrace', description: 'Weather-resistant natural finish', span: 'row-span-1' },
+        { id: 16, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119819/indepented6_ishzgc.jpg', title: 'Courtyard', description: 'Indoor-outdoor harmony', span: 'row-span-1' }
     ];
 
     const openModal = (image, index) => {
