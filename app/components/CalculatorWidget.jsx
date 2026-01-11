@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
+import emailjs from "@emailjs/browser";
 
 const CalculatorWidget = ({ onClick, label = 'CALCULATE NOW', buttonText = 'EMI', outerText }) => {
   const [scrollY, setScrollY] = useState(0);
@@ -24,10 +25,38 @@ const CalculatorWidget = ({ onClick, label = 'CALCULATE NOW', buttonText = 'EMI'
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = () => {
-    if (formData.name.trim() && formData.phone.trim()) {
-      setShowCalculator(true);
-    }
+const handleSubmit = () => {
+  const phoneDigits = (formData.phone || '').replace(/\D/g, '');
+  if (!formData.name.trim()) {
+    alert('Please enter your name');
+    return;
+  }
+  if (phoneDigits.length !== 10) {
+    alert('Please enter a valid 10-digit phone number');
+    return;
+  }
+
+  if (formData.name.trim() && phoneDigits.length === 10) {
+    emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      { name: formData.name, phone: phoneDigits },
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    )
+      .then(
+        (result) => {
+          console.log(result.text);
+          window.location.href = '/Estmatepage';
+          alert("Email sent successfully ✅");
+          if (form && form.current && typeof form.current.reset === 'function') form.current.reset();
+        },
+        (error) => {
+          console.error(error.text);
+          alert("Failed to send email ❌");
+        }
+      );
+    setShowCalculator(true);
+  }
   };
 
   const handleClose = () => {
@@ -134,6 +163,7 @@ const CalculatorWidget = ({ onClick, label = 'CALCULATE NOW', buttonText = 'EMI'
                     <input
                       type="text"
                       name="name"
+                      required
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="Enter your full name"
@@ -147,6 +177,7 @@ const CalculatorWidget = ({ onClick, label = 'CALCULATE NOW', buttonText = 'EMI'
                       type="tel"
                       name="phone"
                       value={formData.phone}
+                      required
                       onChange={handleInputChange}
                       placeholder="Enter your phone number"
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"

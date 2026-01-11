@@ -4,6 +4,7 @@ import { Phone, Mail, MapPin, ChevronDown, Instagram, Facebook, Linkedin, ArrowR
 import WhatsAppWidget from './WatsappWidget';
 import PhoneNavbar from './PhoneNavbar';
 import CalculatorWidget from './CalculatorWidget';
+import emailjs from "@emailjs/browser";
 
 
 export default function HolmacHomepage() {
@@ -64,6 +65,26 @@ export default function HolmacHomepage() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
+ if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Email sent successfully ✅");
+          form.current.reset();
+        },
+        (error) => {
+          console.error(error.text);
+          alert("Failed to send email ❌");
+        }
+      );
         alert('Thank you! We will contact you soon.');
         setFormData({ name: '', email: '', phone: '', message: '' });
     };
