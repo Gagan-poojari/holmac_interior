@@ -125,11 +125,11 @@ export default function VenetianPlasterPage() {
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-                    <a href="/products" className="flex items-center gap-2 text-[#4a4237] hover:text-[#d4af37] transition-all duration-300 group">
+                    <a href="/" className="flex items-center gap-2 text-[#4a4237] hover:text-[#d4af37] transition-all duration-300 group">
                         <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" />
-                        <span className="text-sm font-light tracking-wider hidden sm:inline">Back to Products</span>
+                        <span className="text-sm font-light tracking-wider hidden sm:inline">Back to Home</span>
                     </a>
-                    
+
                     <div className="flex items-center gap-3">
                         <img src="/holmac_circle.png" alt="Holmac" className="h-11 w-11 opacity-90" />
                         <div className="hidden sm:block">
@@ -159,7 +159,7 @@ export default function VenetianPlasterPage() {
                             </div>
 
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extralight text-[#2d2416] mb-6 leading-[1.1] tracking-tight">
-                                Venetian<br/>
+                                Venetian<br />
                                 <span className="italic text-[#d4af37] font-light">Plaster</span>
                             </h1>
 
@@ -173,7 +173,7 @@ export default function VenetianPlasterPage() {
                                 Venetian plaster, or "stucco veneziano," is a traditional technique dating back to ancient Rome. Our artisans apply multiple layers of lime putty mixed with marble dust, each burnished to perfection, creating walls that seem to glow from within.
                             </p>
 
-                            <button 
+                            <button
                                 onClick={scrollToContact}
                                 className="inline-flex items-center gap-3 px-10 py-4 bg-[#2d2416] text-white text-sm tracking-widest font-light hover:bg-[#3d3426] transition-all duration-300"
                                 style={{ borderRadius: '2px' }}
@@ -228,14 +228,14 @@ export default function VenetianPlasterPage() {
                                 image: 'https://images.unsplash.com/photo-1615873968403-89e068629265?w=800&q=90'
                             }
                         ].map((item, idx) => (
-                            <div 
+                            <div
                                 key={idx}
                                 className={`group ${isVisible['appearance'] ? 'animate-scale' : 'opacity-0'}`}
                                 style={{ animationDelay: `${idx * 0.1}s`, borderRadius: '2px' }}
                             >
                                 <div className="overflow-hidden mb-4" style={{ borderRadius: '2px' }}>
-                                    <img 
-                                        src={item.image} 
+                                    <img
+                                        src={item.image}
                                         alt={item.title}
                                         className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
@@ -266,7 +266,7 @@ export default function VenetianPlasterPage() {
                             <div
                                 key={idx}
                                 className={`relative p-8 bg-white transition-all duration-500 hover:shadow-xl group cursor-pointer ${isVisible['process'] ? 'animate-scale' : 'opacity-0'}`}
-                                style={{ 
+                                style={{
                                     animationDelay: `${idx * 0.1}s`,
                                     borderRadius: '2px'
                                 }}
@@ -282,7 +282,7 @@ export default function VenetianPlasterPage() {
                                     </div>
                                 </div>
                                 <p className="text-[#6b6257] text-sm leading-relaxed">{step.description}</p>
-                                
+
                                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-[#d4af37] to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                             </div>
                         ))}
@@ -315,7 +315,7 @@ export default function VenetianPlasterPage() {
                             <div
                                 key={idx}
                                 className={`p-6 bg-[#fafaf8] hover:bg-white transition-all duration-300 hover:shadow-lg group ${isVisible['advantages'] ? 'animate-scale' : 'opacity-0'}`}
-                                style={{ 
+                                style={{
                                     animationDelay: `${idx * 0.08}s`,
                                     borderRadius: '2px'
                                 }}
@@ -337,10 +337,10 @@ export default function VenetianPlasterPage() {
                     <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#d4af37] rounded-full blur-3xl"></div>
                     <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#c9a552] rounded-full blur-3xl"></div>
                 </div>
-                
+
                 <div className="max-w-4xl mx-auto relative text-center">
                     <h2 className="text-4xl md:text-5xl font-extralight text-white mb-6 tracking-tight">
-                        Transform Your Space with<br/>
+                        Transform Your Space with<br />
                         <span className="text-[#d4af37] italic">Venetian Plaster</span>
                     </h2>
                     <div className="w-12 h-px bg-linear-to-r from-transparent via-[#d4af37] to-transparent mx-auto mb-8"></div>
@@ -349,7 +349,7 @@ export default function VenetianPlasterPage() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16">
-                        <a 
+                        <a
                             href="tel:+919916511351"
                             className="inline-flex items-center gap-3 px-10 py-4 bg-[#d4af37] text-[#2d2416] text-sm tracking-widest font-medium hover:bg-[#e6c255] transition-all duration-300"
                             style={{ borderRadius: '2px' }}
@@ -357,16 +357,16 @@ export default function VenetianPlasterPage() {
                             <Phone className="w-4 h-4" />
                             +91 9916511351
                         </a>
-                        <a 
-                                                    href="https://wa.me/919916511351"
-                                                    target="_blank"
-                                                    rel="noreferrer"
-                                                    className="inline-flex items-center gap-3 px-10 py-4 bg-transparent border border-[#d4af37]/50 text-[#d4af37] hover:bg-[#d4af37] hover:text-[#2d2416] transition-all duration-300 text-sm tracking-widest font-medium w-full sm:w-auto justify-center group"
-                                                    style={{ borderRadius: '2px' }}
-                                                >
-                                                    <FaWhatsapp className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                                                    Get a Quote
-                                                </a>
+                        <a
+                            href="https://wa.me/919916511351"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-3 px-10 py-4 bg-transparent border border-[#d4af37]/50 text-[#d4af37] hover:bg-[#d4af37] hover:text-[#2d2416] transition-all duration-300 text-sm tracking-widest font-medium w-full sm:w-auto justify-center group"
+                            style={{ borderRadius: '2px' }}
+                        >
+                            <FaWhatsapp className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                            Get a Quote
+                        </a>
                     </div>
 
                     <div className="text-[#c9b896] text-sm font-light">

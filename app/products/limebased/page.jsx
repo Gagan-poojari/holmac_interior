@@ -125,9 +125,9 @@ export default function LimeBasedCoatingPage() {
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-                    <a href="/products" className="flex items-center gap-2 text-[#4a4237] hover:text-[#d4af37] transition-all duration-300 group">
+                    <a href="/" className="flex items-center gap-2 text-[#4a4237] hover:text-[#d4af37] transition-all duration-300 group">
                         <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" />
-                        <span className="text-sm font-light tracking-wider hidden sm:inline">Back to Products</span>
+                        <span className="text-sm font-light tracking-wider hidden sm:inline">Back to Home</span>
                     </a>
                     
                     <div className="flex items-center gap-3">

@@ -813,7 +813,7 @@ export default function HolmacHomepage() {
                         </div>
 
                         {/* Quick Links */}
-                        <div>
+                        {/* <div>
                             <h4 className="text-sm tracking-[0.2em] md:mb-6 mb-2 text-[#d4af37] font-medium">QUICK LINKS</h4>
                             <ul className="md:space-y-3 space-y-2">
                                 <li><a href="#about" className="text-[#b8985f] hover:text-white transition-colors text-sm hover:translate-x-1 inline-block duration-300">About Us</a></li>
@@ -821,7 +821,7 @@ export default function HolmacHomepage() {
                                 <li><a href="#gallery" className="text-[#b8985f] hover:text-white transition-colors text-sm hover:translate-x-1 inline-block duration-300">Portfolio</a></li>
                                 <li><a href="#contact" className="text-[#b8985f] hover:text-white transition-colors text-sm hover:translate-x-1 inline-block duration-300">Contact Us</a></li>
                             </ul>
-                        </div>
+                        </div> */}
 
                         {/* Services */}
                         <div>
@@ -885,10 +885,10 @@ export default function HolmacHomepage() {
                         <p className="text-[#b8985f] text-sm">
                             © {new Date().getFullYear()} Holmac Interior. All rights reserved.
                         </p>
-                        <div className="flex gap-6 text-sm text-[#b8985f]">
+                        {/* <div className="flex gap-6 text-sm text-[#b8985f]">
                             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </footer>

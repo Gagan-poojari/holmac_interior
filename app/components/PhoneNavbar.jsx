@@ -5,9 +5,9 @@ export default function PhoneNavbar() {
   const [active, setActive] = useState('about');
 
   const navItems = [
+    { id: 'gallery', label: 'GALLERY', icon: Image },
     { id: 'about', label: 'ABOUT', icon: Building2 },
     { id: 'products', label: 'PRODUCTS', icon: Tag },
-    { id: 'gallery', label: 'GALLERY', icon: Image },
     { id: 'contact', label: 'CONTACT', icon: Menu }
   ];
 
