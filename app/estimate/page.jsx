@@ -130,7 +130,7 @@ export default function PricingPage() {
       {/* Main Content */}
       <main className="flex-1 overflow-y-auto px-8 mt-0 sm:mt-16 py-8">
         {/* Title Section */}
-        <div className="mb-8 text-center flex-shrink-0">
+        <div className="mb-8 text-center shrink-0">
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
             Your Starting Estimates
           </h2>
@@ -149,7 +149,7 @@ export default function PricingPage() {
               key={plan.id}
               className={`rounded-lg overflow-hidden border transition-all duration-300 flex flex-col ${
                 plan.isPopular
-                  ? 'border-yellow-400 bg-gradient-to-b from-white to-yellow-50 shadow-lg ring-2 ring-yellow-200'
+                  ? 'border-yellow-400 bg-linear-to-b from-white to-yellow-50 shadow-lg ring-2 ring-yellow-200'
                   : 'border-gray-200 bg-white shadow-sm hover:shadow-md hover:border-yellow-300'
               }`}
             >
@@ -188,14 +188,14 @@ export default function PricingPage() {
               </div>
 
               {/* Includes Section */}
-              <div className="px-5 py-4 flex-grow overflow-y-auto">
+              <div className="px-5 py-4 grow overflow-y-auto">
                 <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2">
                   What's Included
                 </h4>
                 <div className="space-y-2">
                   {plan.includes.slice(0, 4).map((item, idx) => (
                     <div key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 size={14} className={`flex-shrink-0 mt-0.5 ${plan.isPopular ? 'text-yellow-600' : 'text-yellow-500'}`} />
+                      <CheckCircle2 size={14} className={`shrink-0 mt-0.5 ${plan.isPopular ? 'text-yellow-600' : 'text-yellow-500'}`} />
                       <span className="text-xs text-gray-700">{item}</span>
                     </div>
                   ))}
@@ -234,7 +234,7 @@ export default function PricingPage() {
         </div>
 
         {/* Features Row */}
-        <div className="bg-gray-50 rounded-lg border border-gray-200 p-6 flex-shrink-0">
+        <div className="bg-gray-50 rounded-lg border border-gray-200 p-6 shrink-0">
           <div className="grid grid-cols-3 gap-6">
             <div className="text-center">
               <div className="text-lg font-bold text-yellow-600 mb-1">100%</div>
