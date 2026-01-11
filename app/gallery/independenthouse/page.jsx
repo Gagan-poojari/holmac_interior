@@ -51,21 +51,19 @@ export default function IndependentHouse() {
 
     const galleryImages = [
         { id: 1, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119793/indepented14_ph3oj0.jpg', title: '', description: '', span: 'row-span-2' },
-        { id: 2, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119781/indepented1_lb6cba.jpg', title: 'Kitchen', description: 'Contemporary lime-based finish', span: 'row-span-1' },
-        { id: 3, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119784/indepented7_gadfqo.jpg', title: 'Master Bedroom', description: 'Soft textured walls with natural pigments', span: 'row-span-1' },
-        { id: 4, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119785/indepented3_heephv.jpg', title: 'Bathroom', description: 'Water-resistant natural coating', span: 'row-span-2' },
-        { id: 5, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119785/indepented3_heephv.jpg', title: 'Dining Area', description: 'Classic marmorino technique', span: 'row-span-1' },
-        { id: 6, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119785/indepented3_heephv.jpg', title: 'Study Room', description: 'Deep charcoal plaster finish', span: 'row-span-1' },
-        { id: 7, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119789/indepented9_usd0lq.jpg', title: 'Entrance Hall', description: 'Grand architectural detailing', span: 'row-span-2' },
-        { id: 8, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119789/indepented8_r0llrd.jpg', title: 'Balcony', description: 'Exterior lime wash application', span: 'row-span-1' },
-        { id: 9, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119789/indepented10_kglkmn.jpg', title: 'Guest Room', description: 'Subtle texture with mineral accents', span: 'row-span-1' },
-        { id: 10, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119790/indepented4_mlozf6.jpg', title: 'Corridor', description: 'Seamless wall-to-ceiling flow', span: 'row-span-2' },
-        { id: 11, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119792/indepented11_lwlh8i.jpg', title: 'Terrace', description: 'Weather-resistant natural finish', span: 'row-span-1' },
-        { id: 12, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119792/indepented13_drfdq9.jpg', title: 'Courtyard', description: 'Indoor-outdoor harmony', span: 'row-span-1' },
-         { id: 13, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119792/indepented12_gzjjy1.jpg', title: 'Guest Room', description: 'Subtle texture with mineral accents', span: 'row-span-1' },
-        { id: 14, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119793/indepented14_ph3oj0.jpg', title: 'Corridor', description: 'Seamless wall-to-ceiling flow', span: 'row-span-2' },
-        { id: 15, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119805/indepented5_jgvx8u.jpg', title: 'Terrace', description: 'Weather-resistant natural finish', span: 'row-span-1' },
-        { id: 16, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119819/indepented6_ishzgc.jpg', title: 'Courtyard', description: 'Indoor-outdoor harmony', span: 'row-span-1' }
+        { id: 2, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119781/indepented1_lb6cba.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 3, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119784/indepented7_gadfqo.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 4, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119785/indepented3_heephv.jpg', title: '', description: '', span: 'row-span-2' },
+        { id: 7, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119789/indepented9_usd0lq.jpg', title: '', description: '', span: 'row-span-2' },
+        { id: 8, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119789/indepented8_r0llrd.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 9, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119789/indepented10_kglkmn.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 10, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119790/indepented4_mlozf6.jpg', title: '', description: '', span: 'row-span-2' },
+        { id: 11, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119792/indepented11_lwlh8i.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 12, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119792/indepented13_drfdq9.jpg', title: '', description: '', span: 'row-span-1' },
+         { id: 13, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119792/indepented12_gzjjy1.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 14, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119793/indepented14_ph3oj0.jpg', title: '', description: '', span: 'row-span-2' },
+        { id: 15, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119805/indepented5_jgvx8u.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 16, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119819/indepented6_ishzgc.jpg', title: '', description: '', span: 'row-span-1' }
     ];
 
     const openModal = (image, index) => {
@@ -287,12 +285,11 @@ export default function IndependentHouse() {
                                     alt={image.title}
                                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                 
-                                <div className="absolute inset-x-0 bottom-0 p-6 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                {/* <div className="absolute inset-x-0 bottom-0 p-6 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                                     <h3 className="text-white font-light text-base tracking-wide mb-1">{image.title}</h3>
                                     <p className="text-white/70 text-xs font-light tracking-wide">{image.description}</p>
-                                </div>
+                                </div> */}
 
                                 <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ borderRadius: '2px' }}>
                                     <ZoomIn className="w-4 h-4 text-[#2d2416]" />

@@ -16,17 +16,19 @@ export default function MainGallery() {
 
     // --- ASSET CONFIGURATION ---
     const featuredVideos = [
-        { id: 'v1', title: 'The Art of Plaster', thumbnail: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800', videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4' },
-        { id: 'v2', title: 'Modern Walkthrough', thumbnail: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800', videoUrl: 'https://www.w3schools.com/html/movie.mp4' },
+        { id: 'v1', title: '', thumbnail: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119201/contemporary2_iaeenq.jpg', videoUrl: 'https://res.cloudinary.com/djfxdsmvk/video/upload/v1768142044/video5_l6oov6.mp4' },
+        { id: 'v2', title: '', thumbnail: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119124/contemporary3_qy5wk4.jpg', videoUrl: 'https://res.cloudinary.com/djfxdsmvk/video/upload/v1768142083/video3_nrcaar.mp4' },
+        { id: 'v3', title: '', thumbnail: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119212/contemporary16_sklwfn.jpg', videoUrl: 'https://res.cloudinary.com/djfxdsmvk/video/upload/v1768142129/video2_x76vqv.mp4' },
+        { id: 'v4', title: '', thumbnail: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119204/contemporary10_ubsk31.jpg', videoUrl: 'https://res.cloudinary.com/djfxdsmvk/video/upload/v1768142133/video_wec4hs.mp4' },
+        { id: 'v5', title: '', thumbnail: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119424/farm1_ubv4hh.jpg', videoUrl: 'https://res.cloudinary.com/djfxdsmvk/video/upload/v1768142195/video4_vk8jnh.mp4' },
+        { id: 'v6', title: '', thumbnail: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119784/indepented7_gadfqo.jpg', videoUrl: 'https://res.cloudinary.com/djfxdsmvk/video/upload/v1768142334/video6_vqi0jl.mp4' },
     ];
 
     const allProjects = [
-        { id: 1, category: 'Independent House', title: 'The Granite Villa', image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800', link: '/gallery/independenthouse' },
-        { id: 2, category: 'Apartment', title: 'Azure Skyline Suite', image: 'https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=800', link: '/gallery/apartment' },
-        { id: 3, category: 'Farm House', title: 'Rustic Retreat', image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800', link: '/gallery/farmhouse' },
-        { id: 4, category: 'Contemporary', title: 'Monochrome Loft', image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800', link: '/gallery/contemporary' },
-        { id: 5, category: 'Independent House', title: 'Oak & Stone Estate', image: 'https://images.unsplash.com/photo-1600585154526-990dcea4db0d?w=800', link: '/gallery/independenthouse' },
-        { id: 6, category: 'Apartment', title: 'Minimalist Studio', image: 'https://images.unsplash.com/photo-1600121848594-d86cc4f595e7?w=800', link: '/gallery/apartment' },
+        { id: 1, category: 'Independent House', title: 'Independent House Interior', image: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119784/indepented7_gadfqo.jpg', link: '/gallery/independenthouse' },
+        { id: 3, category: 'Farm House', title: 'Farm House Interior', image: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119430/farm7_njzxpi.jpg', link: '/gallery/farmhouse' },
+        { id: 4, category: 'Contemporary', title: 'Contemporary Interior', image: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118655/apartment7_la0gus.jpg', link: '/gallery/contemporary' },
+        { id: 2, category: 'Apartment', title: 'Apartment Interior', image: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119212/contemporary16_sklwfn.jpg', link: '/gallery/apartment' },
     ];
 
     const categories = ['All', 'Independent House', 'Apartment', 'Farm House', 'Contemporary'];

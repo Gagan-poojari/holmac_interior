@@ -50,18 +50,13 @@ export default function FarmhouseGallery() {
     };
 
     const galleryImages = [
-        { id: 1, url: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=90', title: 'Grand Veranda', description: 'Reclaimed wood beams with natural stone flooring', span: 'row-span-2' },
-        { id: 2, url: 'https://images.unsplash.com/photo-1513519245088-0e12902e35a6?w=1600&q=90', title: 'Rustic Kitchen', description: 'Hand-crafted cabinetry and farmhouse sink integration', span: 'row-span-1' },
-        { id: 3, url: 'https://images.unsplash.com/photo-1600585154526-990dcea4db0d?w=1600&q=90', title: 'Great Hall', description: 'Double-height ceilings with exposed timber trusses', span: 'row-span-1' },
-        { id: 4, url: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1600&q=90', title: 'Master Suite', description: 'Organic linen textures and lime-wash walls', span: 'row-span-2' },
-        { id: 5, url: 'https://images.unsplash.com/photo-1600210491369-e753d80a41f3?w=1600&q=90', title: 'Breakfast Nook', description: 'Sun-drenched corner with wrap-around windows', span: 'row-span-1' },
-        { id: 6, url: 'https://images.unsplash.com/photo-1600607687644-c7171bb3e29b?w=1600&q=90', title: 'Utility Mudroom', description: 'Durable slate flooring and bespoke storage', span: 'row-span-1' },
-        { id: 7, url: 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=1600&q=90', title: 'Courtyard View', description: 'Seamless transition between earth and architecture', span: 'row-span-2' },
-        { id: 8, url: 'https://images.unsplash.com/photo-1600047509782-20d39509f26d?w=1600&q=90', title: 'Outdoor Living', description: 'Al-fresco dining area with textured plaster finish', span: 'row-span-1' },
-        { id: 9, url: 'https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=1600&q=90', title: 'Stone Fireplace', description: 'Natural fieldstone hearth as a focal point', span: 'row-span-1' },
-        { id: 10, url: 'https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=1600&q=90', title: 'Library Loft', description: 'Quiet retreat featuring dark oak accents', span: 'row-span-2' },
-        { id: 11, url: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1600&q=90', title: 'Modern Barn Door', description: 'Custom sliding hardware with aged patina', span: 'row-span-1' },
-        { id: 12, url: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1600&q=90', title: 'Guest Cottage', description: 'Minimalist farmhouse aesthetic for visitors', span: 'row-span-1' }
+        { id: 1, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119424/farm1_ubv4hh.jpg', title: '', description: '', span: 'row-span-2' },
+        { id: 2, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119426/farm4_h38nu4.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 3, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119426/farm2_vvnjo3.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 4, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119426/farm3_ioem8v.jpg', title: '', description: '', span: 'row-span-2' },
+        { id: 5, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119427/farm5_ycu6wo.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 6, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119427/farm6_gkxxhi.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 7, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119430/farm7_njzxpi.jpg', title: '', description: '', span: 'row-span-2' }
     ];
 
     const openModal = (image, index) => {
@@ -181,7 +176,7 @@ export default function FarmhouseGallery() {
                                 <div className="absolute -inset-4 bg-linear-to-br from-[#d4af37]/5 via-transparent to-[#c9a552]/5 rounded-lg blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                                 <div className="relative overflow-hidden" style={{ borderRadius: '2px' }}>
                                     <img
-                                        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=90"
+                                        src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119430/farm7_njzxpi.jpg"
                                         alt="Modern Farmhouse Exterior"
                                         className="w-full h-112.5 md:h-150 object-cover transform group-hover:scale-[1.02] transition-transform duration-700"
                                     />
@@ -283,7 +278,7 @@ export default function FarmhouseGallery() {
                                     alt={image.title}
                                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                {/* <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" /> */}
                                 
                                 <div className="absolute inset-x-0 bottom-0 p-6 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                                     <h3 className="text-white font-light text-base tracking-wide mb-1">{image.title}</h3>

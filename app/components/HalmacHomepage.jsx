@@ -255,7 +255,7 @@ export default function HolmacHomepage() {
                         >
                             <div className="relative h-100 md:h-125 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=90"
+                                    src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119784/indepented7_gadfqo.jpg"
                                     alt="Independent House Interior Design"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
@@ -286,15 +286,15 @@ export default function HolmacHomepage() {
                         </a>
 
                         {/* Apartment Interior */}
-                        <a
-                            href="/gallery/apartment"
+                       <a
+                            href="/gallery/contemporary"
                             className={`group relative overflow-hidden rounded-sm cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`}
-                            style={{ animationDelay: '0.1s' }}
+                            style={{ animationDelay: '0.3s' }}
                         >
                             <div className="relative h-100 md:h-125 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=800&q=90"
-                                    alt="Apartment Interior Design"
+                                    src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119212/contemporary16_sklwfn.jpg"
+                                    alt="Contemporary Interior Design"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-[#2d2416]/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
@@ -302,18 +302,18 @@ export default function HolmacHomepage() {
                                 {/* Category Badge */}
                                 <div className="absolute top-6 left-6">
                                     <div className="px-4 py-2 bg-[#d4af37] rounded-full">
-                                        <Building2 className="w-5 h-5 text-[#2d2416] inline-block mr-2" />
-                                        <span className="text-[#2d2416] text-xs tracking-wider font-medium">APARTMENT</span>
+                                        <Sparkles className="w-5 h-5 text-[#2d2416] inline-block mr-2" />
+                                        <span className="text-[#2d2416] text-xs tracking-wider font-medium">CONTEMPORARY</span>
                                     </div>
                                 </div>
 
                                 {/* Content Overlay */}
                                 <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                                     <h3 className="text-white text-3xl md:text-4xl font-light mb-3 tracking-wide">
-                                        Apartment Interior
+                                        Contemporary Design
                                     </h3>
                                     <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
-                                        Maximizing space with elegant lime-based coatings and textured finishes
+                                        Sleek, modern aesthetics with premium plaster and mineral pigments
                                     </p>
                                     <div className="flex items-center gap-3 text-[#d4af37] text-sm font-medium tracking-wider">
                                         <span>EXPLORE DESIGNS</span>
@@ -331,7 +331,7 @@ export default function HolmacHomepage() {
                         >
                             <div className="relative h-100 md:h-125 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=90"
+                                    src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119430/farm7_njzxpi.jpg"
                                     alt="Farm House Interior Design"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
@@ -362,15 +362,15 @@ export default function HolmacHomepage() {
                         </a>
 
                         {/* Contemporary Interior */}
-                        <a
-                            href="/gallery/contemporary"
+                         <a
+                            href="/gallery/apartment"
                             className={`group relative overflow-hidden rounded-sm cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`}
-                            style={{ animationDelay: '0.3s' }}
+                            style={{ animationDelay: '0.1s' }}
                         >
                             <div className="relative h-100 md:h-125 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=90"
-                                    alt="Contemporary Interior Design"
+                                    src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118655/apartment7_la0gus.jpg"
+                                    alt="Apartment Interior Design"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-[#2d2416]/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
@@ -378,18 +378,18 @@ export default function HolmacHomepage() {
                                 {/* Category Badge */}
                                 <div className="absolute top-6 left-6">
                                     <div className="px-4 py-2 bg-[#d4af37] rounded-full">
-                                        <Sparkles className="w-5 h-5 text-[#2d2416] inline-block mr-2" />
-                                        <span className="text-[#2d2416] text-xs tracking-wider font-medium">CONTEMPORARY</span>
+                                        <Building2 className="w-5 h-5 text-[#2d2416] inline-block mr-2" />
+                                        <span className="text-[#2d2416] text-xs tracking-wider font-medium">APARTMENT</span>
                                     </div>
                                 </div>
 
                                 {/* Content Overlay */}
                                 <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                                     <h3 className="text-white text-3xl md:text-4xl font-light mb-3 tracking-wide">
-                                        Contemporary Design
+                                        Apartment Interior
                                     </h3>
                                     <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
-                                        Sleek, modern aesthetics with premium plaster and mineral pigments
+                                        Maximizing space with elegant lime-based coatings and textured finishes
                                     </p>
                                     <div className="flex items-center gap-3 text-[#d4af37] text-sm font-medium tracking-wider">
                                         <span>EXPLORE DESIGNS</span>

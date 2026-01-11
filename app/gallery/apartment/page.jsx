@@ -50,18 +50,26 @@ export default function ApartmentGallery() {
     };
 
     const galleryImages = [
-        { id: 1, url: 'https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=1600&q=90', title: 'Modern Living Space', description: 'Sleek lime-based finish in neutral tones', span: 'row-span-2' },
-        { id: 2, url: 'https://images.unsplash.com/photo-1615873968403-89e068629265?w=1600&q=90', title: 'Compact Kitchen', description: 'Space-maximizing design with textured accents', span: 'row-span-1' },
-        { id: 3, url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&q=90', title: 'Bedroom Retreat', description: 'Warm Venetian plaster creating cozy ambiance', span: 'row-span-1' },
-        { id: 4, url: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1600&q=90', title: 'Contemporary Bath', description: 'Moisture-resistant natural coating', span: 'row-span-2' },
-        { id: 5, url: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1600&q=90', title: 'Dining Nook', description: 'Multi-functional space with elegant finish', span: 'row-span-1' },
-        { id: 6, url: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1600&q=90', title: 'Home Office', description: 'Focused workspace with calming textures', span: 'row-span-1' },
-        { id: 7, url: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&q=90', title: 'Entryway', description: 'Welcoming first impression with natural finishes', span: 'row-span-2' },
-        { id: 8, url: 'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=1600&q=90', title: 'Balcony', description: 'Indoor-outdoor transition with weather-resistant coating', span: 'row-span-1' },
-        { id: 9, url: 'https://images.unsplash.com/photo-1615529328331-f8917597711f?w=1600&q=90', title: 'Guest Bedroom', description: 'Versatile space with subtle texture play', span: 'row-span-1' },
-        { id: 10, url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=90', title: 'Hallway', description: 'Seamless flow with light-enhancing finish', span: 'row-span-2' },
-        { id: 11, url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=90', title: 'Storage Niche', description: 'Functional beauty with integrated design', span: 'row-span-1' },
-        { id: 12, url: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1600&q=90', title: 'Open Layout', description: 'Fluid space with cohesive wall treatment', span: 'row-span-1' }
+        { id: 1, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118646/apartment1_mz1sxb.jpg', title: '', description: '', span: 'row-span-2' },
+        { id: 2, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118650/apartment3_fvvo0w.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 3, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118653/apartment5_eaxtbh.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 4, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118655/apartment7_la0gus.jpg', title: '', description: '', span: 'row-span-2' },
+        { id: 5, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118655/apartment4_nuuamf.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 6, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118656/apartment6_iytkkq.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 7, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118660/apartment12_sfvbrh.jpg', title: '', description: '', span: 'row-span-2' },
+        { id: 8, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118659/apartment11_ma3xbt.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 9, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118664/apartment15_ujlipx.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 10, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118672/apartment19_slrolk.jpg', title: '', description: '', span: 'row-span-2' },
+        { id: 11, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118665/apartment16_zur0yn.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 12, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118667/apartment17_vyo6mp.jpg', title: '', description: '', span: 'row-span-1' },
+        
+        { id: 13, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118658/apartment8_pkvgpb.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 14, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118661/apartment14_jexq29.jpg', title: '', description: '', span: 'row-span-2' },
+        { id: 15, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118668/apartment18_vhgwof.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 16, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118692/apartment2_eggop4.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 17, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118705/apartment9_bj6r1w.jpg', title: '', description: '', span: 'row-span-2' },
+        { id: 18, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118713/apartment10_wib4hw.jpg', title: '', description: '', span: 'row-span-1' },
+        { id: 19, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118716/apartment13_usl5j1.jpg', title: '', description: '', span: 'row-span-1' },
     ];
 
     const openModal = (image, index) => {
@@ -283,7 +291,7 @@ export default function ApartmentGallery() {
                                     alt={image.title}
                                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                {/* <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" /> */}
                                 
                                 <div className="absolute inset-x-0 bottom-0 p-6 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                                     <h3 className="text-white font-light text-base tracking-wide mb-1">{image.title}</h3>

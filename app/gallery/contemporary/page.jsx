@@ -50,18 +50,22 @@ export default function ContemporaryGallery() {
     };
 
     const galleryImages = [
-        { id: 1, url: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1600&q=90', title: 'Minimalist Atrium', description: 'Sculptural lighting paired with micro-concrete flooring', span: 'row-span-2' },
-        { id: 2, url: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1600&q=90', title: 'Monochrome Kitchen', description: 'Matte black finishes with hidden handle-less cabinetry', span: 'row-span-1' },
-        { id: 3, url: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=1600&q=90', title: 'Glass Partitioning', description: 'Crittall-style doors defining space without blocking light', span: 'row-span-1' },
-        { id: 4, url: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&q=90', title: 'Executive Suite', description: 'Contemporary luxury with velvet textures and brass accents', span: 'row-span-2' },
-        { id: 5, url: 'https://images.unsplash.com/photo-1600121848594-d86cc4f595e7?w=1600&q=90', title: 'Geometric Lounge', description: 'Angular furniture design meeting soft ambient lighting', span: 'row-span-1' },
-        { id: 6, url: 'https://images.unsplash.com/photo-1600585154526-990dcea4db0d?w=1600&q=90', title: 'Floating Staircase', description: 'Architectural precision in cantilevered oak and steel', span: 'row-span-1' },
-        { id: 7, url: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1600&q=90', title: 'Spa Bath', description: 'Seamless resin walls with integrated stone basins', span: 'row-span-2' },
-        { id: 8, url: 'https://images.unsplash.com/photo-1617806118233-18e1674745be?w=1600&q=90', title: 'Art Gallery Entry', description: 'Museum-grade lighting for private art collections', span: 'row-span-1' },
-        { id: 9, url: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1600&q=90', title: 'Studio Workspace', description: 'Ergonomic design meets high-concept industrial style', span: 'row-span-1' },
-        { id: 10, url: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1600&q=90', title: 'Master Retreat', description: 'Neutral palette with deep charcoal architectural details', span: 'row-span-2' },
-        { id: 11, url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=90', title: 'Concealed Tech', description: 'Smart home integration hidden within walnut paneling', span: 'row-span-1' },
-        { id: 12, url: 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=1600&q=90', title: 'Urban Balcony', description: 'Modern outdoor living with panoramic city views', span: 'row-span-1' }
+        { id: 1, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119111/contemporary5_zdcczt.jpg', title: 'Minimalist Atrium', description: 'Sculptural lighting paired with micro-concrete flooring', span: 'row-span-2' },
+        { id: 2, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119118/contemporary6_fftuzc.jpg', title: 'Monochrome Kitchen', description: 'Matte black finishes with hidden handle-less cabinetry', span: 'row-span-1' },
+        { id: 3, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119124/contemporary3_qy5wk4.jpg', title: 'Glass Partitioning', description: 'Crittall-style doors defining space without blocking light', span: 'row-span-1' },
+        { id: 4, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119146/contemporary1_vksfvz.jpg', title: 'Executive Suite', description: 'Contemporary luxury with velvet textures and brass accents', span: 'row-span-2' },
+        { id: 5, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119154/contemporary7_hfwdac.jpg', title: 'Geometric Lounge', description: 'Angular furniture design meeting soft ambient lighting', span: 'row-span-1' },
+        { id: 6, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119159/contemporary4_epmwk6.jpg', title: 'Floating Staircase', description: 'Architectural precision in cantilevered oak and steel', span: 'row-span-1' },
+        { id: 7, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119164/contemporary9_dwm4d6.jpg', title: 'Spa Bath', description: 'Seamless resin walls with integrated stone basins', span: 'row-span-2' },
+        { id: 8, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119173/contemporary8_jt4xkc.jpg', title: 'Art Gallery Entry', description: 'Museum-grade lighting for private art collections', span: 'row-span-1' },
+        { id: 9, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119194/contemporary11_ilv1j2.jpg', title: 'Studio Workspace', description: 'Ergonomic design meets high-concept industrial style', span: 'row-span-1' },
+        { id: 10, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119201/contemporary2_iaeenq.jpg', title: 'Master Retreat', description: 'Neutral palette with deep charcoal architectural details', span: 'row-span-2' },
+        { id: 11, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119204/contemporary10_ubsk31.jpg', title: 'Concealed Tech', description: 'Smart home integration hidden within walnut paneling', span: 'row-span-1' },
+        { id: 12, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119206/contemporary12_m73vgg.jpg', title: 'Urban Balcony', description: 'Modern outdoor living with panoramic city views', span: 'row-span-1' },
+        { id: 13, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119212/contemporary16_sklwfn.jpg', title: 'Studio Workspace', description: 'Ergonomic design meets high-concept industrial style', span: 'row-span-1' },
+        { id: 14, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119217/contemporary13_oxojfj.jpg', title: 'Master Retreat', description: 'Neutral palette with deep charcoal architectural details', span: 'row-span-2' },
+        { id: 15, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119219/contemporary14_vmoxe6.jpg', title: 'Concealed Tech', description: 'Smart home integration hidden within walnut paneling', span: 'row-span-1' },
+        { id: 16, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119227/contemporary15_ljwdt7.jpg', title: 'Urban Balcony', description: 'Modern outdoor living with panoramic city views', span: 'row-span-1' }
     ];
 
     const openModal = (image, index) => {
