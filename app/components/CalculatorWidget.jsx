@@ -46,13 +46,13 @@ const handleSubmit = () => {
       .then(
         (result) => {
           console.log(result.text);
-          window.location.href = '/Estmatepage';
-          alert("Email sent successfully ✅");
+          window.location.href = '/estimate';
+          alert("Email sent successfully!");
           if (form && form.current && typeof form.current.reset === 'function') form.current.reset();
         },
         (error) => {
           console.error(error.text);
-          alert("Failed to send email ❌");
+          alert("Failed to send email");
         }
       );
     setShowCalculator(true);

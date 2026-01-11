@@ -5,6 +5,7 @@ import WhatsAppWidget from './WatsappWidget';
 import PhoneNavbar from './PhoneNavbar';
 import CalculatorWidget from './CalculatorWidget';
 import emailjs from "@emailjs/browser";
+import Link from 'next/link';
 
 
 export default function HolmacHomepage() {
@@ -404,9 +405,9 @@ export default function HolmacHomepage() {
                         <p className="text-[#5a4e3c] mb-6 text-lg">
                             Can't find what you're looking for?
                         </p>
-                        <button className="px-12 py-4 border-2 border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-all duration-300 tracking-widest text-sm font-medium rounded-sm hover:shadow-xl hover:-translate-y-1">
+                        <Link href="/gallery" className="px-12 py-4 border-2 border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-all duration-300 tracking-widest text-sm font-medium rounded-sm hover:shadow-xl hover:-translate-y-1">
                             VIEW ALL PROJECTS
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>
