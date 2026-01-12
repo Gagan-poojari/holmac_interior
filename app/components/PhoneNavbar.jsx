@@ -2,7 +2,7 @@ import { Building2, Tag, Image, Menu } from 'lucide-react';
 import { useState } from 'react';
 
 export default function PhoneNavbar() {
-  const [active, setActive] = useState('about');
+  const [active, setActive] = useState('gallery');
 
   const navItems = [
     { id: 'gallery', label: 'GALLERY', icon: Image },

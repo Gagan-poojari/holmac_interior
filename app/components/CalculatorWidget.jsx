@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 const CalculatorWidget = ({ onClick, label = 'CALCULATE NOW', buttonText = 'EMI', outerText }) => {
   const [scrollY, setScrollY] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: '', phone: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', style: '' });
   const [showCalculator, setShowCalculator] = useState(false);
 
   const idRef = useRef(`calcRing-${Math.random().toString(36).slice(2, 9)}`);
@@ -31,16 +31,20 @@ const handleSubmit = () => {
     alert('Please enter your name');
     return;
   }
+    if (!formData.style) {
+      alert('Please select a style');
+      return;
+    }
   if (phoneDigits.length !== 10) {
     alert('Please enter a valid 10-digit phone number');
     return;
   }
 
-  if (formData.name.trim() && phoneDigits.length === 10) {
+    if (formData.name.trim() && phoneDigits.length === 10) {
     emailjs.send(
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-      { name: formData.name, phone: phoneDigits },
+      { name: formData.name, phone: phoneDigits, style: formData.style },
       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
     )
       .then(
@@ -182,6 +186,22 @@ const handleSubmit = () => {
                       placeholder="Enter your phone number"
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
                     />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Which style are you looking for?</label>
+                    <select
+                      name="style"
+                      value={formData.style}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+                    >
+                      <option value="">Select a style</option>
+                      <option value="Apartment">Apartment</option>
+                      <option value="Farmhouse">Farmhouse</option>
+                      <option value="Contemporary">Contemporary</option>
+                      <option value="Independent House">Independent House</option>
+                    </select>
                   </div>
 
                   <button onClick={handleSubmit} className="w-full mt-6 py-3 bg-[#b59016] text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 hover:bg-[#c9a227]">GET ESTIMATION</button>

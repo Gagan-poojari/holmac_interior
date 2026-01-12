@@ -15,12 +15,39 @@ export default function EntranceAnimation({ onComplete }) {
     const video = videoRef.current;
     if (!video) return;
 
-    // Attempt autoplay with sound
+    // If network looks very slow, skip the entrance immediately
+    const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    if (conn) {
+      const effective = conn.effectiveType || '';
+      const downlink = conn.downlink || 10;
+      if (effective.includes('2g') || effective.includes('slow-2g') || downlink < 0.5) {
+        onComplete();
+        return;
+      }
+    }
+
+    let started = false;
+    let finished = false;
+    const TIMEOUT_MS = 6000;
+
+    const finish = (fromEnd = false) => {
+      if (finished) return;
+      finished = true;
+      clearTimeout(timeoutId);
+      if (fromEnd) {
+        setHasPlayed(true);
+        setTimeout(() => onComplete(), 300);
+      } else {
+        // fallback/timeout/error: immediately skip
+        onComplete();
+      }
+    };
+
+    // Attempt autoplay with sound, fallback to muted
     const playVideo = async () => {
       try {
         await video.play();
       } catch (error) {
-        // If autoplay with sound fails, try muted
         video.muted = true;
         try {
           await video.play();
@@ -32,27 +59,48 @@ export default function EntranceAnimation({ onComplete }) {
 
     playVideo();
 
-    // Handle video end
+    // Handle video progress/end/error
     const handleTimeUpdate = () => {
-      // Start fade 0.5s before video ends
       if (video.duration - video.currentTime <= 0.5 && !fadeOut) {
         setFadeOut(true);
       }
     };
 
+    const handlePlaying = () => {
+      started = true;
+      clearTimeout(timeoutId);
+    };
+
+    const handleCanPlayThrough = () => {
+      started = true;
+      clearTimeout(timeoutId);
+    };
+
     const handleEnded = () => {
-      setHasPlayed(true);
-      setTimeout(() => {
-        onComplete();
-      }, 300);
+      finish(true);
+    };
+
+    const handleError = () => {
+      finish(false);
     };
 
     video.addEventListener('timeupdate', handleTimeUpdate);
+    video.addEventListener('playing', handlePlaying);
+    video.addEventListener('canplaythrough', handleCanPlayThrough);
     video.addEventListener('ended', handleEnded);
+    video.addEventListener('error', handleError);
+
+    const timeoutId = setTimeout(() => {
+      if (!started) finish(false);
+    }, TIMEOUT_MS);
 
     return () => {
+      clearTimeout(timeoutId);
       video.removeEventListener('timeupdate', handleTimeUpdate);
+      video.removeEventListener('playing', handlePlaying);
+      video.removeEventListener('canplaythrough', handleCanPlayThrough);
       video.removeEventListener('ended', handleEnded);
+      video.removeEventListener('error', handleError);
     };
   }, [hasPlayed, onComplete, fadeOut]);
 
@@ -65,7 +113,7 @@ export default function EntranceAnimation({ onComplete }) {
         className="w-full h-full object-cover"
         playsInline
         preload="auto"
-        src="/entrance_video.mp4"
+        src="https://res.cloudinary.com/djfxdsmvk/video/upload/v1768226799/halmac_main_video_kw9n7l.mp4"
       />
       
       {fadeOut && (

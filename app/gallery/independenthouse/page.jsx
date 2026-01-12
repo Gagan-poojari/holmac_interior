@@ -106,7 +106,7 @@ export default function IndependentHouse() {
     }, [selectedImage, currentImageIndex]);
 
     return (
-        <div className="min-h-screen bg-[#fafaf8]">
+        <div className="min-h-screen bg-plaster">
             <style dangerouslySetInnerHTML={{
                 __html: `
                     @keyframes fadeInUp {
@@ -257,7 +257,7 @@ export default function IndependentHouse() {
             </section>
 
             {/* Elegant Gallery Section */}
-            <section id="gallery-grid" ref={addToRefs} className="py-24 md:py-32 px-6 bg-white">
+            <section id="gallery-grid" ref={addToRefs} className="py-24 md:py-32 px-6 bg-plaster">
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-16 max-w-3xl">
                         <h2 className="text-4xl md:text-5xl font-extralight text-[#2d2416] mb-4 tracking-tight">

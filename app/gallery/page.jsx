@@ -56,7 +56,7 @@ export default function MainGallery() {
         : allProjects.filter(p => p.category === activeFilter);
 
     return (
-        <div className="min-h-screen bg-[#fafaf8]">
+        <div className="min-h-screen bg-plaster">
             {/* Signature Navbar */}
             <nav className="fixed top-0 w-full z-50 transition-all duration-500"
                 style={{
@@ -121,7 +121,7 @@ export default function MainGallery() {
                     </div>
 
                     {/* Highly Functional Filter Bar */}
-                    <div id="projects" className="sticky top-20 z-40 bg-[#fafaf8]/90 backdrop-blur-md py-6 border-y border-[#d4af37]/10 flex flex-wrap items-center justify-between gap-6">
+                    <div id="projects" className="sticky top-20 z-40 bg-plaster/90 backdrop-blur-md py-6 border-y border-[#d4af37]/10 flex flex-wrap items-center justify-between gap-6">
                         <div className="flex gap-4 md:gap-10 overflow-x-auto scrollbar-hide">
                             {categories.map((cat) => (
                                 <button

@@ -144,8 +144,8 @@ export default function HolmacHomepage() {
                     <div className="flex logo items-center gap-3">
                         <img src="/holmac_circle.png" alt="Holmac" className="h-14 w-14" />
                         <div>
-                            <h1 className={`text-2xl logofont font-semibold ${scrollY > 50 ? 'text-[#b59016]' : 'text-[#ffffff]'}`}>{scrollY > 50 ? 'HOLMAC' : 'HOLMAC INTERIOR'}</h1>
-                            <p className={`text-xs logofont tracking-[0.2em] ${scrollY > 50 ? 'text-[#b59016]' : 'text-[#fbfbfb]'}`}>{scrollY > 50 ? 'INTERIOR' : 'INNOVATIVE IDEAS, STYLISH DESIGNS'}</p>
+                            <h1 className={`md:text-2xl logofont font-semibold ${scrollY > 50 ? 'text-[#b59016]' : 'text-[#ffffff]'}`}>{scrollY > 50 ? 'HOLMAC' : 'HOLMAC INTERIOR'}</h1>
+                            <p className={`md:text-xs  logofont tracking-[0.2em] ${scrollY > 50 ? 'text-[#b59016]' : 'text-[#fbfbfb] text-[8px]'}`}>{scrollY > 50 ? 'INTERIOR' : 'INNOVATIVE IDEAS, STYLISH DESIGNS'}</p>
                         </div>
                     </div>
 
@@ -208,13 +208,7 @@ export default function HolmacHomepage() {
                             Contemporary Interior Design
                         </h1>
                     </div>
-                    <div className="overflow-hidden">
-                        <p className="text-lg md:text-2xl text-white/90 mb-12 font-light tracking-wide animate-in"
-                            style={{ animationDelay: '0.4s', opacity: 0 }}>
-                            Premium Venetian Plaster & Lime-Based Coatings
-                        </p>
-                    </div>
-                    <div className="overflow-hidden">
+                    <div className="md:mt-0 mt-10 overflow-hidden">
                         <button className="px-10 py-4 bg-[#967c26] text-white text-sm tracking-widest animate-in"
                             style={{ animationDelay: '0.6s', opacity: 0 }}>
                             EXPLORE OUR WORK BELOW
@@ -260,7 +254,7 @@ export default function HolmacHomepage() {
                         >
                             <div className="relative h-100 md:h-125 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=90"
+                                    src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119784/indepented7_gadfqo.jpg"
                                     alt="Independent House Interior Design"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
@@ -290,43 +284,7 @@ export default function HolmacHomepage() {
                             </div>
                         </a>
 
-                        {/* Apartment Interior */}
-                        <a
-                            href="/gallery/apartment"
-                            className={`group relative overflow-hidden rounded-sm cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`}
-                            style={{ animationDelay: '0.1s' }}
-                        >
-                            <div className="relative h-100 md:h-125 overflow-hidden">
-                                <img
-                                    src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=800&q=90"
-                                    alt="Apartment Interior Design"
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-[#2d2416]/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-
-                                {/* Category Badge */}
-                                <div className="absolute top-6 left-6">
-                                    <div className="px-4 py-2 bg-[#967c26] rounded-full">
-                                        <Building2 className="w-5 h-5 text-[#ffffff] inline-block mr-2" />
-                                        <span className="text-[#ffffff] text-xs tracking-wider font-medium">APARTMENT</span>
-                                    </div>
-                                </div>
-
-                                {/* Content Overlay */}
-                                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                                    <h3 className="text-white text-3xl md:text-4xl font-light mb-3 tracking-wide">
-                                        Apartment Interior
-                                    </h3>
-                                    <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
-                                        Maximizing space with elegant lime-based coatings and textured finishes
-                                    </p>
-                                    <div className="flex items-center gap-3 text-[#967c26] text-sm font-medium tracking-wider">
-                                        <span>EXPLORE DESIGNS</span>
-                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                      
 
                         {/* Farm House */}
                         <a
@@ -336,7 +294,7 @@ export default function HolmacHomepage() {
                         >
                             <div className="relative h-100 md:h-125 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=90"
+                                    src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119430/farm7_njzxpi.jpg"
                                     alt="Farm House Interior Design"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
@@ -366,6 +324,44 @@ export default function HolmacHomepage() {
                             </div>
                         </a>
 
+                          {/* Apartment Interior */}
+                        <a
+                            href="/gallery/apartment"
+                            className={`group relative overflow-hidden rounded-sm cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`}
+                            style={{ animationDelay: '0.1s' }}
+                        >
+                            <div className="relative h-100 md:h-125 overflow-hidden">
+                                <img
+                                    src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118655/apartment7_la0gus.jpg"
+                                    alt="Apartment Interior Design"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-[#2d2416]/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+
+                                {/* Category Badge */}
+                                <div className="absolute top-6 left-6">
+                                    <div className="px-4 py-2 bg-[#967c26] rounded-full">
+                                        <Building2 className="w-5 h-5 text-[#ffffff] inline-block mr-2" />
+                                        <span className="text-[#ffffff] text-xs tracking-wider font-medium">APARTMENT</span>
+                                    </div>
+                                </div>
+
+                                {/* Content Overlay */}
+                                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                                    <h3 className="text-white text-3xl md:text-4xl font-light mb-3 tracking-wide">
+                                        Apartment Interior
+                                    </h3>
+                                    <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
+                                        Maximizing space with elegant lime-based coatings and textured finishes
+                                    </p>
+                                    <div className="flex items-center gap-3 text-[#967c26] text-sm font-medium tracking-wider">
+                                        <span>EXPLORE DESIGNS</span>
+                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
                         {/* Contemporary Interior */}
                         <a
                             href="/gallery/contemporary"
@@ -374,7 +370,7 @@ export default function HolmacHomepage() {
                         >
                             <div className="relative h-100 md:h-125 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=90"
+                                    src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119212/contemporary16_sklwfn.jpg"
                                     alt="Contemporary Interior Design"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
@@ -418,7 +414,7 @@ export default function HolmacHomepage() {
             </section>
 
             {/* About Section - Redesigned */}
-            <section id="about" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-linear-to-br from-[#fdfcf9] via-[#f8f6f1] to-[#f5f2ea] overflow-hidden">
+            <section id="about" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-linear-to-br from-[#fdfcf9] via-[#f8f6f1] to-[#f5f2ea] bg-plaster overflow-hidden">
                 {/* Decorative Elements */}
                 <div className="absolute top-20 right-10 w-72 h-72 bg-[#967c26]/5 rounded-full blur-3xl" />
                 <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#c9a552]/5 rounded-full blur-3xl" />
@@ -471,7 +467,7 @@ export default function HolmacHomepage() {
                                 {/* Main large image */}
                                 <div className="relative overflow-hidden rounded-sm shadow-2xl">
                                     <img
-                                        src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=90"
+                                        src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119789/indepented8_r0llrd.jpg"
                                         alt="Venetian Plaster"
                                         className="w-full md:h-137.5 object-cover"
                                     />
@@ -488,7 +484,7 @@ export default function HolmacHomepage() {
                                 {/* Small floating image */}
                                 <div className="absolute -top-6 -right-6 md:w-48 md:h-48 w-34 h-34 overflow-hidden rounded-sm shadow-xl border-4 border-white">
                                     <img
-                                        src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=400&q=90"
+                                        src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118653/apartment5_eaxtbh.jpg"
                                         alt="Detail"
                                         className="w-full h-full object-cover"
                                     />
@@ -612,7 +608,7 @@ export default function HolmacHomepage() {
             </section>
 
             {/* Why Choose Us Section */}
-            <section className="relative md:py-40 py-10 px-6 bg-[#f5f2ea] overflow-hidden">
+            <section className="relative md:py-40 py-10 px-6 bg-[#f5f2ea] overflow-hidden bg-plaster">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-20">
                         <h2 className="md:text-6xl text-5xl font-extralight text-[#2d2416] mb-4">

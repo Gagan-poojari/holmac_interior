@@ -129,7 +129,7 @@ export default function TexturedFinishesPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-[#fafaf8]">
+        <div className="min-h-screen bg-plaster">
             <style dangerouslySetInnerHTML={{
                 __html: `
                     @keyframes fadeInUp {
@@ -180,7 +180,7 @@ export default function TexturedFinishesPage() {
             </nav>
 
             {/* Hero Section */}
-            <section className="pt-36 md:pt-40 pb-20 md:pb-28 px-6 bg-linear-to-b from-[#fdfcf9] to-[#fafaf8]">
+            <section className="pt-36 md:pt-40 pb-20 md:pb-28 px-6 bg-linear-to-b from-[#fdfcf9] to-[#fafaf8] bg-plaster">
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-8 flex items-center gap-2.5 text-xs text-[#6b6257] font-light tracking-wide">
                         <a href="/" className="hover:text-[#d4af37] transition-colors">Home</a>
@@ -237,7 +237,7 @@ export default function TexturedFinishesPage() {
             </section>
 
             {/* Texture Styles Gallery */}
-            <section id="appearance" ref={addToRefs} className="py-20 md:py-28 px-6 bg-white">
+            <section id="appearance" ref={addToRefs} className="py-20 md:py-28 px-6 bg-plaster">
                 <div className="max-w-7xl mx-auto">
                     <div className={`max-w-3xl mb-16 ${isVisible['appearance'] ? 'animate-in' : 'opacity-0'}`}>
                         <h2 className="text-4xl md:text-5xl font-extralight text-[#2d2416] mb-6 tracking-tight">
@@ -290,7 +290,7 @@ export default function TexturedFinishesPage() {
             </section>
 
             {/* Process Section */}
-            <section id="process" ref={addToRefs} className="py-20 md:py-28 px-6 bg-[#fafaf8]">
+            <section id="process" ref={addToRefs} className="py-20 md:py-28 px-6 bg-plaster">
                 <div className="max-w-7xl mx-auto">
                     <div className={`text-center max-w-3xl mx-auto mb-20 ${isVisible['process'] ? 'animate-in' : 'opacity-0'}`}>
                         <h2 className="text-4xl md:text-5xl font-extralight text-[#2d2416] mb-6 tracking-tight">
@@ -339,7 +339,7 @@ export default function TexturedFinishesPage() {
             </section>
 
             {/* Advantages Section */}
-            <section id="advantages" ref={addToRefs} className="py-20 md:py-28 px-6 bg-white">
+            <section id="advantages" ref={addToRefs} className="py-20 md:py-28 px-6 bg-plaster">
                 <div className="max-w-7xl mx-auto">
                     <div className={`max-w-3xl mb-16 ${isVisible['advantages'] ? 'animate-in' : 'opacity-0'}`}>
                         <h2 className="text-4xl md:text-5xl font-extralight text-[#2d2416] mb-6 tracking-tight">

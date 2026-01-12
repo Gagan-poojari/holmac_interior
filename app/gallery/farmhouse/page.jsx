@@ -160,7 +160,7 @@ export default function FarmhouseGallery() {
             </nav>
 
             {/* Hero Section */}
-            <section className="pt-36 md:pt-40 pb-20 md:pb-32 px-6">
+            <section className="pt-36 md:pt-40 pb-20 md:pb-32 px-6 bg-plaster">
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-8 flex items-center gap-2.5 text-xs text-[#6b6257] font-light tracking-wide">
                         <a href="/" className="hover:text-[#d4af37] transition-colors">Home</a>
@@ -250,7 +250,7 @@ export default function FarmhouseGallery() {
             </section>
 
             {/* Gallery Grid Section */}
-            <section id="gallery-grid" ref={addToRefs} className="py-24 md:py-32 px-6 bg-white">
+            <section id="gallery-grid" ref={addToRefs} className="py-24 md:py-32 px-6 bg-plaster">
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-16 max-w-3xl">
                         <h2 className="text-4xl md:text-5xl font-extralight text-[#2d2416] mb-4 tracking-tight">
