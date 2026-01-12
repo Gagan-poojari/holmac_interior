@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, Building2, Phone, Mail, MapPin, ArrowRight, Award, Heart, X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
+import ContactFooter from '../components/ContactFooter';
 
 export default function ApartmentGallery() {
     const [isVisible, setIsVisible] = useState({});
@@ -62,7 +63,7 @@ export default function ApartmentGallery() {
         { id: 10, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118672/apartment19_slrolk.jpg', title: '', description: '', span: 'row-span-2' },
         { id: 11, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118665/apartment16_zur0yn.jpg', title: '', description: '', span: 'row-span-1' },
         { id: 12, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118667/apartment17_vyo6mp.jpg', title: '', description: '', span: 'row-span-1' },
-        
+
         { id: 13, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118658/apartment8_pkvgpb.jpg', title: '', description: '', span: 'row-span-1' },
         { id: 14, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118661/apartment14_jexq29.jpg', title: '', description: '', span: 'row-span-2' },
         { id: 15, url: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118668/apartment18_vhgwof.jpg', title: '', description: '', span: 'row-span-1' },
@@ -161,7 +162,7 @@ export default function ApartmentGallery() {
                         <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" />
                         <span className="text-sm font-light tracking-wider hidden sm:inline">Back to Home</span>
                     </a>
-                    
+
                     <div className="flex items-center gap-3">
                         <img src="/holmac_circle.png" alt="Holmac" className="h-11 w-11 opacity-90" />
                         <div className="hidden sm:block">
@@ -206,7 +207,7 @@ export default function ApartmentGallery() {
 
                         <div className="lg:col-span-5 flex flex-col justify-center animate-right" style={{ animationDelay: '0.2s' }}>
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extralight text-[#2d2416] mb-8 leading-[1.1] tracking-tight">
-                                Apartment<br/>
+                                Apartment<br />
                                 <span className="italic text-[#d4af37] font-light">Living</span>
                             </h1>
 
@@ -249,7 +250,7 @@ export default function ApartmentGallery() {
                                 </div>
                             </div>
 
-                            <button 
+                            <button
                                 onClick={scrollToContact}
                                 className="inline-flex items-center gap-3 px-10 py-4 bg-[#2d2416] text-white text-sm tracking-widest font-light hover:bg-[#3d3426] transition-all duration-300 group w-fit"
                                 style={{ borderRadius: '2px' }}
@@ -280,7 +281,7 @@ export default function ApartmentGallery() {
                             <div
                                 key={image.id}
                                 className={`${image.span} relative overflow-hidden group cursor-pointer ${isVisible['gallery-grid'] ? 'animate-scale' : 'opacity-0'}`}
-                                style={{ 
+                                style={{
                                     animationDelay: `${index * 0.04}s`,
                                     borderRadius: '2px'
                                 }}
@@ -292,7 +293,7 @@ export default function ApartmentGallery() {
                                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                                 />
                                 {/* <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" /> */}
-                                
+
                                 <div className="absolute inset-x-0 bottom-0 p-6 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                                     <h3 className="text-white font-light text-base tracking-wide mb-1">{image.title}</h3>
                                     <p className="text-white/70 text-xs font-light tracking-wide">{image.description}</p>
@@ -313,11 +314,11 @@ export default function ApartmentGallery() {
                     <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#d4af37] rounded-full blur-3xl"></div>
                     <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#c9a552] rounded-full blur-3xl"></div>
                 </div>
-                
+
                 <div className="max-w-4xl mx-auto relative">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-6xl font-extralight text-white mb-6 tracking-tight leading-tight">
-                            Elevate Your<br/>Apartment Living
+                            Elevate Your<br />Apartment Living
                         </h2>
                         <div className="w-12 h-px bg-linear-to-r from-transparent via-[#d4af37] to-transparent mx-auto mb-8"></div>
                         <p className="text-[#c9b896] text-lg font-light max-w-2xl mx-auto leading-relaxed">
@@ -326,15 +327,15 @@ export default function ApartmentGallery() {
                     </div>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16">
-                        <a 
-                            href="tel:+919916511351"
+                        <a
+                            href="tel:+919164315156"
                             className="inline-flex items-center gap-3 px-10 py-4 bg-[#d4af37] text-[#2d2416] text-sm tracking-widest font-medium hover:bg-[#e6c255] transition-all duration-300 w-full sm:w-auto justify-center group"
                             style={{ borderRadius: '2px' }}
                         >
                             <Phone className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
                             Call Now
                         </a>
-                        <a 
+                        <a
                             href="https://wa.me/919916511351"
                             target="_blank"
                             rel="noreferrer"
@@ -346,33 +347,18 @@ export default function ApartmentGallery() {
                         </a>
                     </div>
 
-                    <div className="pt-12 border-t border-[#d4af37]/10">
-                        <div className="grid sm:grid-cols-3 gap-8 text-center">
-                            <div className="space-y-2">
-                                <Phone className="w-4 h-4 text-[#d4af37] mx-auto mb-3" />
-                                <p className="text-[#c9b896] text-sm font-light">+91 9916511351</p>
-                            </div>
-                            <div className="space-y-2">
-                                <Mail className="w-4 h-4 text-[#d4af37] mx-auto mb-3" />
-                                <p className="text-[#c9b896] text-sm font-light">holmac135@gmail.com</p>
-                            </div>
-                            <div className="space-y-2">
-                                <MapPin className="w-4 h-4 text-[#d4af37] mx-auto mb-3" />
-                                <p className="text-[#c9b896] text-sm font-light">Udupi / Mangaluru</p>
-                            </div>
-                        </div>
-                    </div>
+                    <ContactFooter />
                 </div>
             </section>
 
             {/* Image Modal */}
             {selectedImage && (
-                <div 
+                <div
                     className="fixed inset-0 z-50 flex items-center justify-center modal-fade"
                     style={{ backgroundColor: 'rgba(0, 0, 0, 0.95)' }}
                     onClick={closeModal}
                 >
-                    <button 
+                    <button
                         className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors z-50 p-2 hover:bg-white/5 backdrop-blur-sm"
                         onClick={closeModal}
                         style={{ borderRadius: '2px' }}
@@ -380,14 +366,14 @@ export default function ApartmentGallery() {
                         <X className="w-6 h-6" />
                     </button>
 
-                    <button 
+                    <button
                         className="absolute left-6 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-all z-50 p-3 hover:bg-white/5 backdrop-blur-sm group"
                         onClick={(e) => { e.stopPropagation(); prevImage(); }}
                         style={{ borderRadius: '2px' }}
                     >
                         <ChevronLeft className="w-8 h-8 group-hover:-translate-x-1 transition-transform" />
                     </button>
-                    <button 
+                    <button
                         className="absolute right-6 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-all z-50 p-3 hover:bg-white/5 backdrop-blur-sm group"
                         onClick={(e) => { e.stopPropagation(); nextImage(); }}
                         style={{ borderRadius: '2px' }}
@@ -404,7 +390,7 @@ export default function ApartmentGallery() {
                                 onClick={() => setIsZoomed(!isZoomed)}
                                 style={{ borderRadius: '2px' }}
                             />
-                            
+
                             <div className="absolute bottom-0 inset-x-0 bg-linear-to-t from-black/90 via-black/60 to-transparent p-8">
                                 <div className="flex items-end justify-between">
                                     <div>
@@ -422,11 +408,10 @@ export default function ApartmentGallery() {
                             {galleryImages.map((img, idx) => (
                                 <div
                                     key={img.id}
-                                    className={`shrink-0 w-20 h-20 cursor-pointer transition-all duration-300 ${
-                                        idx === currentImageIndex 
-                                            ? 'opacity-100 ring-2 ring-[#d4af37]' 
-                                            : 'opacity-40 hover:opacity-70'
-                                    }`}
+                                    className={`shrink-0 w-20 h-20 cursor-pointer transition-all duration-300 ${idx === currentImageIndex
+                                        ? 'opacity-100 ring-2 ring-[#d4af37]'
+                                        : 'opacity-40 hover:opacity-70'
+                                        }`}
                                     onClick={(e) => {
                                         e.stopPropagation();
                                         setCurrentImageIndex(idx);

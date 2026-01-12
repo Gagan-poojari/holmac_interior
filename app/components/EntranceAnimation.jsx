@@ -1,5 +1,6 @@
 'use client';
 import React, { useRef, useEffect, useState } from 'react';
+import CustomLoader from './CustomLoader';
 
 export default function EntranceAnimation({ onComplete }) {
   const videoRef = useRef(null);
@@ -115,7 +116,7 @@ export default function EntranceAnimation({ onComplete }) {
         preload="auto"
         src="https://res.cloudinary.com/djfxdsmvk/video/upload/v1768226799/halmac_main_video_kw9n7l.mp4"
       />
-      
+            
       {fadeOut && (
         <div 
           className="absolute inset-0 bg-black pointer-events-none"
