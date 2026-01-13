@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, CheckCircle, Layers, Palette, Shield, Sparkles, Sun, Droplets, Clock, Award, Phone, Mail } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 
-export default function VenetianPlasterPage() {
+export default function limePlasterPage() {
     const [isVisible, setIsVisible] = useState({});
     const [scrollY, setScrollY] = useState(0);
     const [activeStep, setActiveStep] = useState(0);
@@ -148,7 +148,7 @@ export default function VenetianPlasterPage() {
                         <span className="text-[#d4af37]">•</span>
                         <a href="/products" className="hover:text-[#d4af37] transition-colors">Products</a>
                         <span className="text-[#d4af37]">•</span>
-                        <span className="text-[#d4af37]">Venetian Plaster</span>
+                        <span className="text-[#d4af37]">lime Plaster</span>
                     </div>
 
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -159,7 +159,7 @@ export default function VenetianPlasterPage() {
                             </div>
 
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extralight text-[#2d2416] mb-6 leading-[1.1] tracking-tight">
-                                Venetian<br />
+                                Lime<br />
                                 <span className="italic text-[#d4af37] font-light">Plaster</span>
                             </h1>
 
@@ -170,7 +170,7 @@ export default function VenetianPlasterPage() {
                             </p>
 
                             <p className="text-[#6b6257] leading-relaxed mb-8">
-                                Venetian plaster, or "stucco veneziano," is a traditional technique dating back to ancient Rome. Our artisans apply multiple layers of lime putty mixed with marble dust, each burnished to perfection, creating walls that seem to glow from within.
+                                lime plaster, or "stucco veneziano," is a traditional technique dating back to ancient Rome. Our artisans apply multiple layers of lime putty mixed with marble dust, each burnished to perfection, creating walls that seem to glow from within.
                             </p>
 
                             <button
@@ -187,7 +187,7 @@ export default function VenetianPlasterPage() {
                                 <div className="absolute -inset-4 bg-linear-to-br from-[#d4af37]/10 via-transparent to-[#c9a552]/10 blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-700"></div>
                                 <img
                                     src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200&q=90"
-                                    alt="Venetian Plaster Finish"
+                                    alt="lime Plaster Finish"
                                     className="relative w-full h-125 md:h-150 object-cover shadow-2xl"
                                     style={{ borderRadius: '2px' }}
                                 />
@@ -206,7 +206,7 @@ export default function VenetianPlasterPage() {
                         </h2>
                         <div className="w-12 h-px bg-linear-to-r from-[#d4af37] to-transparent mb-8"></div>
                         <p className="text-[#6b6257] text-lg leading-relaxed">
-                            Venetian plaster transforms walls into works of art, with a depth and complexity that changes throughout the day as light moves across the surface.
+                            lime plaster transforms walls into works of art, with a depth and complexity that changes throughout the day as light moves across the surface.
                         </p>
                     </div>
 
@@ -257,7 +257,7 @@ export default function VenetianPlasterPage() {
                         </h2>
                         <div className="w-12 h-px bg-linear-to-r from-transparent via-[#d4af37] to-transparent mx-auto mb-8"></div>
                         <p className="text-[#6b6257] text-lg leading-relaxed">
-                            Creating Venetian plaster is a meticulous craft requiring skill, patience, and an eye for detail. Each step builds upon the last.
+                            Creating lime plaster is a meticulous craft requiring skill, patience, and an eye for detail. Each step builds upon the last.
                         </p>
                     </div>
 
@@ -302,11 +302,11 @@ export default function VenetianPlasterPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className={`max-w-3xl mb-16 ${isVisible['advantages'] ? 'animate-in' : 'opacity-0'}`}>
                         <h2 className="text-4xl md:text-5xl font-extralight text-[#2d2416] mb-6 tracking-tight">
-                            Why Choose Venetian Plaster
+                            Why Choose lime Plaster
                         </h2>
                         <div className="w-12 h-px bg-linear-to-r from-[#d4af37] to-transparent mb-8"></div>
                         <p className="text-[#6b6257] text-lg leading-relaxed">
-                            Beyond its stunning appearance, Venetian plaster offers practical benefits that make it an investment in lasting beauty.
+                            Beyond its stunning appearance, lime plaster offers practical benefits that make it an investment in lasting beauty.
                         </p>
                     </div>
 
@@ -341,11 +341,11 @@ export default function VenetianPlasterPage() {
                 <div className="max-w-4xl mx-auto relative text-center">
                     <h2 className="text-4xl md:text-5xl font-extralight text-white mb-6 tracking-tight">
                         Transform Your Space with<br />
-                        <span className="text-[#d4af37] italic">Venetian Plaster</span>
+                        <span className="text-[#d4af37] italic">lime Plaster</span>
                     </h2>
                     <div className="w-12 h-px bg-linear-to-r from-transparent via-[#d4af37] to-transparent mx-auto mb-8"></div>
                     <p className="text-[#c9b896] text-lg font-light mb-12 max-w-2xl mx-auto">
-                        Ready to experience the timeless elegance of authentic Venetian plaster? Let's discuss your vision.
+                        Ready to experience the timeless elegance of authentic lime plaster? Let's discuss your vision.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16">

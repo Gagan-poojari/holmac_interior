@@ -144,8 +144,8 @@ export default function HolmacHomepage() {
                     <div className="flex logo items-center gap-3">
                         <img src="/holmac_circle.png" alt="Holmac" className="h-14 w-14" />
                         <div>
-                            <h1 className={`md:text-2xl logofont font-semibold ${scrollY > 50 ? 'text-[#b59016]' : 'text-[#ffffff]'}`}>{scrollY > 50 ? 'HOLMAC' : 'HOLMAC INTERIOR'}</h1>
-                            <p className={`md:text-xs  logofont tracking-[0.2em] ${scrollY > 50 ? 'text-[#b59016]' : 'text-[#fbfbfb] text-[8px]'}`}>{scrollY > 50 ? 'INTERIOR' : 'INNOVATIVE IDEAS, STYLISH DESIGNS'}</p>
+                            <h1 className={`md:text-2xl logofont font-semibold ${scrollY > 50 ? 'text-[#b59016] text-xl' : 'text-[#ffffff]'}`}>{scrollY > 50 ? 'HOLMAC' : 'HOLMAC INTERIOR'}</h1>
+                            <p className={`md:text-sm  logofont tracking-[0.2em] ${scrollY > 50 ? 'text-[#b59016]  text-sm' : 'text-[#fbfbfb] text-[8px]'}`}>{scrollY > 50 ? 'INTERIOR' : 'INNOVATIVE IDEAS, STYLISH DESIGNS'}</p>
                         </div>
                     </div>
 
@@ -274,7 +274,7 @@ export default function HolmacHomepage() {
                                         Independent House
                                     </h3>
                                     <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
-                                        Complete home transformations with custom Venetian plaster and natural finishes
+                                        Complete home transformations with custom lime plaster and natural finishes
                                     </p>
                                     <div className="flex items-center gap-3 text-[#967c26] text-sm font-medium tracking-wider">
                                         <span>EXPLORE DESIGNS</span>
@@ -436,7 +436,7 @@ export default function HolmacHomepage() {
 
                             <div className="md:space-y-6 space-y-3 text-[#5a4e3c] leading-relaxed mb-10">
                                 <p className="md:text-lg text-md">
-                                    We specialize in <span className="text-[#967c26] font-medium">premium natural wall finishes</span> inspired by traditional Venetian plaster and lime-based coatings.
+                                    We specialize in <span className="text-[#967c26] font-medium">premium natural wall finishes</span> inspired by traditional lime plaster and lime-based coatings.
                                 </p>
                                 <p className="md:text-md text-sm">
                                     Our products are crafted from natural raw materials including finely crushed clay, premium lime, and mineral pigments to create rich, durable, and eco-friendly wall surfaces.
@@ -468,7 +468,7 @@ export default function HolmacHomepage() {
                                 <div className="relative overflow-hidden rounded-sm shadow-2xl">
                                     <img
                                         src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119789/indepented8_r0llrd.jpg"
-                                        alt="Venetian Plaster"
+                                        alt="lime Plaster"
                                         className="w-full md:h-137.5 object-cover"
                                     />
                                     <div className="absolute inset-0 bg-linear-to-t from-[#2d2416]/40 to-transparent" />
@@ -523,23 +523,23 @@ export default function HolmacHomepage() {
                     <div className="grid lg:grid-cols-3 md:gap-8 gap-6">
                         {[
                             {
-                                title: 'Venetian Plaster',
+                                title: 'Lime Plaster',
                                 desc: 'Authentic Italian technique with luxurious marble-like finish that adds depth and sophistication to any space.',
-                                img: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&q=90',
+                                img: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768303656/lime_plaster_ncxusr.jpg',
                                 features: ['Marble Effect', 'Luxurious Finish', 'Timeless Beauty'],
-                                link: '/products/venetian'
+                                link: '/products/lime'
                             },
                             {
                                 title: 'Lime-Based Coating',
                                 desc: 'Breathable, eco-friendly finish perfect for modern spaces with natural texture and sustainable properties.',
-                                img: 'https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=600&q=90',
+                                img: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768303654/limebased_fyxspw.jpg',
                                 features: ['Eco-Friendly', 'Breathable', 'Natural Texture'],
                                 link: '/products/limebased'
                             },
                             {
                                 title: 'Textured Finishes',
                                 desc: 'Custom textures using natural clay and mineral pigments for unique character and artistic expression.',
-                                img: 'https://images.unsplash.com/photo-1615873968403-89e068629265?w=600&q=90',
+                                img: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768303654/textured_zumyvh.jpg',
                                 features: ['Custom Design', 'Mineral Pigments', 'Unique Patterns'],
                                 link: '/products/textured'
                             }
@@ -831,7 +831,7 @@ export default function HolmacHomepage() {
                             <ul className="space-y-3 text-sm text-[#b8985f]">
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#967c26] mt-1">•</span>
-                                    Venetian Plaster
+                                    Lime Plaster
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#967c26] mt-1">•</span>
