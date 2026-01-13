@@ -14,7 +14,7 @@ export default function HolmacHomepage() {
     const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
     const [hoveredProduct, setHoveredProduct] = useState(null);
     const observerRefs = useRef([]);
-    const form = useRef(); 
+    const form = useRef();
 
     useEffect(() => {
         const handleScroll = () => setScrollY(window.scrollY);
@@ -422,7 +422,7 @@ export default function HolmacHomepage() {
                 </div>
             </section>
 
-            {/* About Section - Redesigned */}
+            {/* About Section - Enhanced with Furniture Services */}
             <section id="about" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-linear-to-br from-[#fdfcf9] via-[#f8f6f1] to-[#f5f2ea] bg-plaster overflow-hidden">
                 {/* Decorative Elements */}
                 <div className="absolute top-20 right-10 w-72 h-72 bg-[#967c26]/5 rounded-full blur-3xl" />
@@ -439,19 +439,22 @@ export default function HolmacHomepage() {
                             </div>
 
                             <h2 className="md:text-6xl text-4xl font-extralight text-[#2d2416] mb-8 leading-[1.1]">
-                                Crafting<br />
-                                <span className="text-[#967c26] font-light italic">Timeless</span> Elegance
+                                Complete Interior<br />
+                                <span className="text-[#967c26] font-light italic">Transformation</span>
                             </h2>
 
                             <div className="md:space-y-6 space-y-3 text-[#5a4e3c] leading-relaxed mb-10">
                                 <p className="md:text-lg text-md">
-                                    We specialize in <span className="text-[#967c26] font-medium">premium natural wall finishes</span> inspired by traditional lime plaster and lime-based coatings.
+                                    We specialize in <span className="text-[#967c26] font-medium">premium natural wall finishes</span> inspired by traditional lime plaster and lime-based coatings, creating stunning backdrops for your living spaces.
                                 </p>
                                 <p className="md:text-md text-sm">
-                                    Our products are crafted from natural raw materials including finely crushed clay, premium lime, and mineral pigments to create rich, durable, and eco-friendly wall surfaces.
+                                    Our wall products are crafted from natural raw materials including finely crushed clay, premium lime, and mineral pigments to create rich, durable, and eco-friendly surfaces that elevate both interiors and exteriors.
                                 </p>
                                 <p className="md:text-md text-sm">
-                                    Every project is a masterpiece, with <span className="font-medium text-[#2d2416]">custom color tones</span> ensuring seamless integration with your architecture and ambiance.
+                                    Beyond walls, we design and craft <span className="text-[#967c26] font-medium">bespoke interior furniture</span> that complements our finishes perfectly—from custom seating and tables to built-in storage solutions that maximize your space with timeless elegance.
+                                </p>
+                                <p className="md:text-md text-sm">
+                                    Every project features <span className="font-medium text-[#2d2416]">custom color tones and furniture designs</span> ensuring seamless integration with your architecture and ambiance—creating cohesive, harmonious spaces.
                                 </p>
                             </div>
 
@@ -459,8 +462,8 @@ export default function HolmacHomepage() {
                             <div className="grid grid-cols-3 gap-8">
                                 {[
                                     { num: '15+', label: 'Years Experience' },
-                                    { num: '500+', label: 'Projects Done' },
-                                    { num: '100%', label: 'Natural Materials' }
+                                    { num: '500+', label: 'Projects Completed' },
+                                    { num: '100%', label: 'Custom Solutions' }
                                 ].map((stat, idx) => (
                                     <div key={idx} className="text-center">
                                         <div className="text-4xl font-light text-[#967c26] mb-2">{stat.num}</div>
@@ -470,33 +473,90 @@ export default function HolmacHomepage() {
                             </div>
                         </div>
 
-                        {/* Right: Images Grid */}
+                        {/* Right: Enhanced Images Grid */}
                         <div className={`${isVisible['about'] ? 'animate-right' : 'opacity-0'} order-first lg:order-last`} style={{ animationDelay: '0.2s' }}>
                             <div className="relative">
-                                {/* Main large image */}
-                                <div className="relative overflow-hidden rounded-sm shadow-2xl">
+                                {/* Main large image - Wall finish */}
+                                <div className="relative overflow-hidden rounded-sm shadow-2xl mb-6">
                                     <img
                                         src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119789/indepented8_r0llrd.jpg"
-                                        alt="lime Plaster"
-                                        className="w-full md:h-137.5 object-cover"
+                                        alt="Premium Wall Finishes"
+                                        className="w-full h-96 object-cover"
                                     />
-                                    <div className="absolute inset-0 bg-linear-to-t from-[#2d2416]/40 to-transparent" />
+                                    <div className="absolute inset-0 bg-linear-to-t from-[#2d2416]/50 to-transparent" />
+                                    <div className="absolute bottom-4 left-4 bg-[#967c26]/90 backdrop-blur-sm px-4 py-2 rounded-sm">
+                                        <span className="text-white text-sm font-medium tracking-wider">WALL FINISHES</span>
+                                    </div>
                                 </div>
 
-                                {/* Floating badge */}
-                                <div className="absolute -bottom-8 md:-left-8 -left-4 bg-[#967c26] text-[#2d2416] p-3 md:p-10 rounded-sm shadow-2xl transform md:hover:scale-105 transition-transform duration-300">
-                                    <Award className="md:w-12 md:h-12 w-8 h-8 mb-3" />
-                                    <div className="md:text-5xl text-3xl font-extralight mb-1">15+</div>
-                                    <div className="md:text-sm text-xs tracking-wider opacity-90">Years of Excellence</div>
-                                </div>
-
-                                {/* Small floating image */}
-                                <div className="absolute -top-6 -right-6 md:w-48 md:h-48 w-34 h-34 overflow-hidden rounded-sm shadow-xl border-4 border-white">
+                                {/* Secondary image - Furniture */}
+                                <div className="relative overflow-hidden rounded-sm shadow-2xl">
                                     <img
                                         src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118653/apartment5_eaxtbh.jpg"
-                                        alt="Detail"
-                                        className="w-full h-full object-cover"
+                                        alt="Custom Interior Furniture"
+                                        className="w-full h-64 object-cover"
                                     />
+                                    <div className="absolute inset-0 bg-linear-to-t from-[#2d2416]/50 to-transparent" />
+                                    <div className="absolute bottom-4 left-4 bg-[#967c26]/90 backdrop-blur-sm px-4 py-2 rounded-sm">
+                                        <span className="text-white text-sm font-medium tracking-wider">CUSTOM FURNITURE</span>
+                                    </div>
+                                </div>
+
+                                {/* Floating badge with eye-catching animations */}
+                                <div className="absolute -top-6 md:-left-8 -left-4 bg-[#967c26] text-[#ffffff] p-2 md:p-8 md:px-12 px-4 rounded-sm shadow-2xl z-10 group/badge cursor-pointer overflow-hidden
+              hover:shadow-[0_20px_60px_rgba(150,124,38,0.5)] transition-all duration-500 hover:scale-110">
+                                    {/* Shimmer effect overlay */}
+                                    <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent 
+                  -translate-x-full group-hover/badge:translate-x-full transition-transform duration-1000 ease-in-out" />
+
+                                    {/* Rotating border glow */}
+                                    <div className="absolute inset-0 opacity-0 group-hover/badge:opacity-100 transition-opacity duration-500">
+                                        <div className="absolute inset-0 rounded-sm animate-pulse"
+                                            style={{
+                                                boxShadow: '0 0 30px rgba(255,215,0,0.6), inset 0 0 20px rgba(255,215,0,0.3)',
+                                                animationDuration: '2s'
+                                            }}
+                                        />
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className="relative z-10">
+                                        {/* Icon with rotation animation */}
+                                        <div className="transform group-hover/badge:rotate-360 group-hover/badge:scale-110 transition-all duration-700 mb-3">
+                                            <Award className="md:w-10 md:h-10 w-6 h-6 drop-shadow-lg" />
+                                        </div>
+
+                                        {/* Number with flip effect */}
+                                        <div className="md:text-4xl text-2xl font-extralight mb-1 
+                      group-hover/badge:scale-125 transition-transform duration-500
+                      drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
+                                            360°
+                                        </div>
+
+                                        {/* Text with slide-up effect */}
+                                        <div className="overflow-hidden h-10 md:h-10 relative">
+                                            <div className="text-xs tracking-wider opacity-90 
+                          absolute inset-0 flex items-center justify-center
+                          group-hover/badge:-translate-y-full transition-transform duration-500">
+                                                Complete Solutions
+                                            </div>
+                                            <div className="text-xs tracking-wider font-medium
+                          absolute inset-0 flex items-center justify-center
+                          translate-y-full group-hover/badge:translate-y-0 transition-transform duration-500">
+                                                Walls + Furniture
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Corner sparkles */}
+                                    <div className="absolute top-2 right-2 w-3 h-3 opacity-0 group-hover/badge:opacity-100 transition-all duration-300">
+                                        <div className="absolute inset-0 bg-white rounded-full animate-ping" style={{ animationDuration: '1.5s' }} />
+                                        <div className="absolute inset-0 bg-white rounded-full" />
+                                    </div>
+                                    <div className="absolute bottom-2 left-2 w-2 h-2 opacity-0 group-hover/badge:opacity-100 transition-all duration-300 delay-150">
+                                        <div className="absolute inset-0 bg-white rounded-full animate-ping" style={{ animationDuration: '1.5s' }} />
+                                        <div className="absolute inset-0 bg-white rounded-full" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
