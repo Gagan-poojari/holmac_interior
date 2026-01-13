@@ -74,7 +74,7 @@ export default function ThankYouPage() {
         </div>
 
         {/* Divider */}
-        <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mb-10"></div>
+        <div className="w-24 h-px bg-linear-to-r from-transparent via-[#d4af37] to-transparent mb-10"></div>
 
         {/* Availability Section */}
         <div className="text-center">

@@ -99,7 +99,7 @@ export default function MainGallery() {
                                 A comprehensive showcase of textures, light, and architectural innovation across our premium residential projects.
                             </p>
                         </div>
-                        <div className="lg:col-span-5 flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+                        <div className="lg:col-span-5 flex gap-4 overflow-x-auto pb-4 elegant-scroll">
                             {featuredVideos.map((video) => (
                                 <div
                                     key={video.id}
@@ -212,10 +212,14 @@ export default function MainGallery() {
                             <div>
                                 <h4 className="text-white text-xs tracking-[0.3em] font-bold mb-8 uppercase">Contact Details</h4>
                                 <div className="space-y-6">
-                                    <a href="tel:+919916511351" className="flex items-center gap-4 group">
-                                        <Phone className="w-4 h-4 text-[#d4af37]" />
-                                        <span className="text-[#c9b896] font-light group-hover:text-white transition-colors">+91 9916511351</span>
-                                    </a>
+                                    <a 
+                            href="tel:+919164315156" 
+                            aria-label="Call +91 9164315156"
+                                className="space-y-2">
+                                <Phone className="w-4 h-4 text-[#d4af37] mx-auto mb-3" />
+
+                                <p className="text-[#c9b896] text-sm font-light">+91 9164315156</p>
+                            </a>
                                     <a href="mailto:holmac135@gmail.com" className="flex items-center gap-4 group">
                                         <Mail className="w-4 h-4 text-[#d4af37]" />
                                         <span className="text-[#c9b896] font-light group-hover:text-white transition-colors">holmac135@gmail.com</span>

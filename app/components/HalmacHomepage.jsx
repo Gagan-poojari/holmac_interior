@@ -14,6 +14,7 @@ export default function HolmacHomepage() {
     const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
     const [hoveredProduct, setHoveredProduct] = useState(null);
     const observerRefs = useRef([]);
+    const form = useRef(); 
 
     useEffect(() => {
         const handleScroll = () => setScrollY(window.scrollY);
@@ -63,31 +64,39 @@ export default function HolmacHomepage() {
         }
     };
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        if (!form.current) return;
 
-        emailjs
-            .sendForm(
-                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-                form.current,
-                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-            )
+        // Validate
+        if (!formData.name || !formData.email || !formData.phone) {
+            alert('Please fill in all fields');
+            return;
+        }
+
+        // Send email
+        emailjs.send(
+            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+            {
+                name: formData.name,
+                email: formData.email,
+                phone: formData.phone,
+                message: formData.message
+            },
+            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        )
             .then(
                 (result) => {
-                    console.log(result.text);
-                    alert("Email sent successfully ✅");
-                    form.current.reset();
+                    console.log('SUCCESS!', result.text);
+                    alert('Thank you! We will contact you soon. ✅');
+                    setFormData({ name: '', email: '', phone: '', message: '' });
                 },
                 (error) => {
-                    console.error(error.text);
-                    alert("Failed to send email ❌");
+                    console.error('FAILED...', error.text);
+                    alert('Failed to send message. Please try again. ❌');
                 }
             );
-        alert('Thank you! We will contact you soon.');
-        setFormData({ name: '', email: '', phone: '', message: '' });
     };
 
     return (
@@ -284,7 +293,7 @@ export default function HolmacHomepage() {
                             </div>
                         </a>
 
-                      
+
 
                         {/* Farm House */}
                         <a
@@ -324,7 +333,7 @@ export default function HolmacHomepage() {
                             </div>
                         </a>
 
-                          {/* Apartment Interior */}
+                        {/* Apartment Interior */}
                         <a
                             href="/gallery/apartment"
                             className={`group relative overflow-hidden rounded-sm cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`}
