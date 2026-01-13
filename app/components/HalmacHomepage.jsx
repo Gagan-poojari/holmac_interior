@@ -255,6 +255,43 @@ export default function HolmacHomepage() {
 
                     {/* Service Categories Grid */}
                     <div className="grid md:grid-cols-2 gap-8">
+                         {/* Farm House */}
+                        <a
+                            href="/gallery/farmhouse"
+                            className={`group relative overflow-hidden rounded-sm cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`}
+                            style={{ animationDelay: '0.2s' }}
+                        >
+                            <div className="relative h-100 md:h-125 overflow-hidden">
+                                <img
+                                    src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119430/farm7_njzxpi.jpg"
+                                    alt="Farm House Interior Design"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-[#2d2416]/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+
+                                {/* Category Badge */}
+                                <div className="absolute top-6 left-6">
+                                    <div className="px-4 py-2 bg-[#967c26] rounded-full">
+                                        <Warehouse className="w-5 h-5 text-[#ffffff] inline-block mr-2" />
+                                        <span className="text-[#ffffff] text-xs tracking-wider font-medium">FARM HOUSE</span>
+                                    </div>
+                                </div>
+
+                                {/* Content Overlay */}
+                                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                                    <h3 className="text-white text-3xl md:text-4xl font-light mb-3 tracking-wide">
+                                        Farm House
+                                    </h3>
+                                    <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
+                                        Rustic elegance meets modern luxury with eco-friendly natural materials
+                                    </p>
+                                    <div className="flex items-center gap-3 text-[#967c26] text-sm font-medium tracking-wider">
+                                        <span>EXPLORE DESIGNS</span>
+                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                         {/* Independent House */}
                         <a
                             href="/gallery/independenthouse"
@@ -295,43 +332,7 @@ export default function HolmacHomepage() {
 
 
 
-                        {/* Farm House */}
-                        <a
-                            href="/gallery/farmhouse"
-                            className={`group relative overflow-hidden rounded-sm cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`}
-                            style={{ animationDelay: '0.2s' }}
-                        >
-                            <div className="relative h-100 md:h-125 overflow-hidden">
-                                <img
-                                    src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768119430/farm7_njzxpi.jpg"
-                                    alt="Farm House Interior Design"
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-linear-to-t from-[#2d2416] via-[#2d2416]/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-
-                                {/* Category Badge */}
-                                <div className="absolute top-6 left-6">
-                                    <div className="px-4 py-2 bg-[#967c26] rounded-full">
-                                        <Warehouse className="w-5 h-5 text-[#ffffff] inline-block mr-2" />
-                                        <span className="text-[#ffffff] text-xs tracking-wider font-medium">FARM HOUSE</span>
-                                    </div>
-                                </div>
-
-                                {/* Content Overlay */}
-                                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                                    <h3 className="text-white text-3xl md:text-4xl font-light mb-3 tracking-wide">
-                                        Farm House
-                                    </h3>
-                                    <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
-                                        Rustic elegance meets modern luxury with eco-friendly natural materials
-                                    </p>
-                                    <div className="flex items-center gap-3 text-[#967c26] text-sm font-medium tracking-wider">
-                                        <span>EXPLORE DESIGNS</span>
-                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                       
 
                         {/* Apartment Interior */}
                         <a
