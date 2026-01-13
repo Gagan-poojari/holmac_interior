@@ -215,13 +215,13 @@ export default function ApartmentGallery() {
 
                             <div className="space-y-6 text-[#5a4e3c] mb-10">
                                 <p className="text-lg md:text-xl font-light leading-relaxed tracking-wide">
-                                    Maximizing every square foot with intelligent design, where space limitations become opportunities for creative elegance.
+                                    Smart, space-efficient interiors that deliver a "villa feel" within an urban floor plan.
                                 </p>
                                 <p className="leading-relaxed text-[#6b6257]">
-                                    Our apartment interiors focus on creating visual spaciousness through strategic use of light-reflecting finishes, cohesive color palettes, and multi-functional design elements. Each treatment is tailored to enhance natural light and create an open, airy atmosphere.
+                                    We specialize in <strong>fully integrated apartment fit-outs</strong>. This includes ergonomic modular kitchens with soft-close hardware, custom-built wardrobes, and intelligent storage solutions that maximize every square foot without compromising on style.
                                 </p>
                                 <p className="leading-relaxed text-[#6b6257]">
-                                    From compact studios to expansive penthouses, we understand the unique challenges of apartment living and transform them into sophisticated, comfortable sanctuaries.
+                                    Our team manages the entire process—from electrical and plumbing modifications to the final application of our signature Venetian plaster, giving you a move-in ready home that is sophisticated and functional.
                                 </p>
                             </div>
 

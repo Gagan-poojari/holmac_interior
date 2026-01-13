@@ -202,13 +202,13 @@ export default function FarmhouseGallery() {
 
                             <div className="space-y-6 text-[#5a4e3c] mb-10">
                                 <p className="text-lg md:text-xl font-light leading-relaxed tracking-wide">
-                                    Bridging the gap between heritage and modern luxury, creating timeless escapes that breathe with the landscape.
+                                    We provide complete turnkey solutions for luxury estates, blending rustic charm with modern-day high-end amenities.
                                 </p>
                                 <p className="leading-relaxed text-[#6b6257]">
-                                    Our farmhouse interiors celebrate the beauty of raw, natural materials. We utilize tactile finishes like lime-plastered walls, reclaimed timber, and local stone to create a sense of grounded tranquility and warmth.
+                                    Our farmhouse services go beyond aesthetics. We handle the <strong>full structural transformation</strong>, including weather-resistant exterior lime coatings, custom reclaimed wood furniture, and heavy-duty modular kitchens designed for large-scale hosting.
                                 </p>
                                 <p className="leading-relaxed text-[#6b6257]">
-                                    Every project is designed to enhance the connection to the outdoors, inviting natural light and seasonal colors into your living spaces through thoughtful architectural framing.
+                                    From cozy outdoor sit-outs to grand vaulted ceilings, we manage every detail—procuring raw materials and managing on-site labor to ensure your getaway is as durable as it is beautiful.
                                 </p>
                             </div>
 
@@ -396,8 +396,8 @@ export default function FarmhouseGallery() {
                                 <div
                                     key={img.id}
                                     className={`shrink-0 w-20 h-20 cursor-pointer transition-all duration-300 ${idx === currentImageIndex
-                                            ? 'opacity-100 ring-2 ring-[#d4af37]'
-                                            : 'opacity-40 hover:opacity-70'
+                                        ? 'opacity-100 ring-2 ring-[#d4af37]'
+                                        : 'opacity-40 hover:opacity-70'
                                         }`}
                                     onClick={(e) => {
                                         e.stopPropagation();

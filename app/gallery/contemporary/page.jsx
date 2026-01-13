@@ -211,13 +211,13 @@ export default function ContemporaryGallery() {
 
                             <div className="space-y-6 text-[#5a4e3c] mb-10">
                                 <p className="text-lg md:text-xl font-light leading-relaxed tracking-wide">
-                                    Defining the "Now" through bold architectural gestures, monochromatic palettes, and high-performance materials.
+                                    Cutting-edge design meets precision engineering for homes that demand a bold, minimalist edge.
                                 </p>
                                 <p className="leading-relaxed text-[#6b6257]">
-                                    Our contemporary approach moves beyond mere minimalism. We focus on the "architecture of the void"—using negative space to highlight premium textures, smart automation, and bespoke furniture pieces.
+                                    Our contemporary service focuses on <strong>high-performance materials and clean lines</strong>. We offer bespoke furniture manufacturing, sleek handle-less modular systems, and advanced lighting automation that highlights our premium mineral wall finishes.
                                 </p>
                                 <p className="leading-relaxed text-[#6b6257]">
-                                    From high-rise lofts to modern galleries, we specialize in creating environments that feel both expansive and intimate, using a disciplined design language that prioritizes clarity and flow.
+                                    We prioritize flow and clarity, providing a single point of contact for the entire project lifecycle—ensuring the technical execution of the design is as flawless as the initial concept.
                                 </p>
                             </div>
 
@@ -405,8 +405,8 @@ export default function ContemporaryGallery() {
                                 <div
                                     key={img.id}
                                     className={`shrink-0 w-20 h-20 cursor-pointer transition-all duration-300 ${idx === currentImageIndex
-                                            ? 'opacity-100 ring-2 ring-[#d4af37]'
-                                            : 'opacity-40 hover:opacity-70'
+                                        ? 'opacity-100 ring-2 ring-[#d4af37]'
+                                        : 'opacity-40 hover:opacity-70'
                                         }`}
                                     onClick={(e) => {
                                         e.stopPropagation();
