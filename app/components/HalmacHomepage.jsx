@@ -6,6 +6,7 @@ import PhoneNavbar from './PhoneNavbar';
 import CalculatorWidget from './CalculatorWidget';
 import emailjs from "@emailjs/browser";
 import Link from 'next/link';
+import ReviewPage from './reviewPage';
 
 
 export default function HolmacHomepage() {
@@ -724,6 +725,7 @@ export default function HolmacHomepage() {
                     </div>
                 </div>
             </section>
+            <ReviewPage/>
 
             {/* Contact Section - Premium Design */}
             <section id="contact" ref={addToRefs} className="relative md:py-40 py-10 px-6 bg-[#2d2416] overflow-hidden">
@@ -921,6 +923,7 @@ export default function HolmacHomepage() {
                                 </li>
                             </ul>
                         </div>
+                        
                         {/* Contact Info */}
                         <div>
                             <h4 className="text-sm tracking-[0.2em] mb-6 text-[#967c26] font-medium">REACH US</h4>

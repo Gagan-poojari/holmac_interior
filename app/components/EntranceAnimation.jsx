@@ -114,7 +114,7 @@ export default function EntranceAnimation({ onComplete }) {
         className="w-full h-full object-cover"
         playsInline
         preload="auto"
-        src="https://res.cloudinary.com/djfxdsmvk/video/upload/v1768314701/entryvideo_immqoc.mp4"
+        src="https://res.cloudinary.com/djfxdsmvk/video/upload/v1768325644/holmac_cboxyh.mp4"
       />
             
       {fadeOut && (
