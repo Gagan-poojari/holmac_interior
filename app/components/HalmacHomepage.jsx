@@ -536,7 +536,7 @@ export default function HolmacHomepage() {
                                 desc: 'Authentic Italian technique with luxurious marble-like finish that adds depth and sophistication to any space.',
                                 img: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768303656/lime_plaster_ncxusr.jpg',
                                 features: ['Marble Effect', 'Luxurious Finish', 'Timeless Beauty'],
-                                link: '/products/lime'
+                                link: '/products/venetian'
                             },
                             {
                                 title: 'Lime-Based Coating',
