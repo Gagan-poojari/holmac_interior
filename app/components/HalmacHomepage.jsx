@@ -537,7 +537,7 @@ export default function HolmacHomepage() {
 
                                         {/* Text with slide-up effect */}
                                         <div className="overflow-hidden h-10 md:h-10 relative">
-                                            <div className="text-xs tracking-wider opacity-90 
+                                            <div className="md:text-xs text-[10px] tracking-wider opacity-90 
                           absolute inset-0 flex items-center justify-center
                           group-hover/badge:-translate-y-full transition-transform duration-500">
                                                 Complete Solutions
