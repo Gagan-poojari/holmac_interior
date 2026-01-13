@@ -241,8 +241,8 @@ export default function HolmacHomepage() {
                     {/* Header */}
                     <div className="text-center md:mb-24 mb-10">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#967c26]/10 rounded-full mb-6">
-                            <Users className="w-4 h-4 text-[#967c26]" />
-                            <span className="text-[#967c26] text-xs tracking-[0.2em] font-medium">OUR EXPERTISE</span>
+                            <Sparkles className="w-4 h-4 text-[#967c26]" />
+                            <span className="text-[#967c26] text-xs tracking-[0.2em] font-medium">WHO WE ARE</span>
                         </div>
 
                         <h2 className="md:text-6xl text-5xl font-extralight text-[#2d2416] mb-6">
@@ -255,7 +255,7 @@ export default function HolmacHomepage() {
 
                     {/* Service Categories Grid */}
                     <div className="grid md:grid-cols-2 gap-8">
-                         {/* Farm House */}
+                        {/* Farm House */}
                         <a
                             href="/gallery/farmhouse"
                             className={`group relative overflow-hidden rounded-sm cursor-pointer ${isVisible['gallery'] ? 'animate-scale' : 'opacity-0'}`}
@@ -283,7 +283,7 @@ export default function HolmacHomepage() {
                                         Farm House
                                     </h3>
                                     <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
-                                        Rustic elegance meets modern luxury with eco-friendly natural materials
+                                        Take the beauty of your beloved abode to a whole new level with our exquisite Farm House Interior Design.
                                     </p>
                                     <div className="flex items-center gap-3 text-[#967c26] text-sm font-medium tracking-wider">
                                         <span>EXPLORE DESIGNS</span>
@@ -320,7 +320,7 @@ export default function HolmacHomepage() {
                                         Independent House
                                     </h3>
                                     <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
-                                        Complete home transformations with custom lime plaster and natural finishes
+                                        We offer an all round home transformations with custom designs, natural finishes and lively furnitures.
                                     </p>
                                     <div className="flex items-center gap-3 text-[#967c26] text-sm font-medium tracking-wider">
                                         <span>EXPLORE DESIGNS</span>
@@ -332,7 +332,7 @@ export default function HolmacHomepage() {
 
 
 
-                       
+
 
                         {/* Apartment Interior */}
                         <a
@@ -362,7 +362,7 @@ export default function HolmacHomepage() {
                                         Apartment Interior
                                     </h3>
                                     <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
-                                        Maximizing space with elegant lime-based coatings and textured finishes
+                                        Complete apartment interior designing with a touch of elegance and sophistication.
                                     </p>
                                     <div className="flex items-center gap-3 text-[#967c26] text-sm font-medium tracking-wider">
                                         <span>EXPLORE DESIGNS</span>
@@ -400,7 +400,7 @@ export default function HolmacHomepage() {
                                         Contemporary Design
                                     </h3>
                                     <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed">
-                                        Sleek, modern aesthetics with premium plaster and mineral pigments
+                                        Create a one of its kind spaces that reflect your unique style with our contemporary interior design services.
                                     </p>
                                     <div className="flex items-center gap-3 text-[#967c26] text-sm font-medium tracking-wider">
                                         <span>EXPLORE DESIGNS</span>
@@ -435,8 +435,8 @@ export default function HolmacHomepage() {
                         {/* Left: Content */}
                         <div className={`${isVisible['about'] ? 'animate-left' : 'opacity-0'} order-last lg:order-first`}>
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#967c26]/10 rounded-full mb-6">
-                                <Sparkles className="w-4 h-4 text-[#967c26]" />
-                                <span className="text-[#967c26] text-xs tracking-[0.2em] font-medium">WHO WE ARE</span>
+                                <Users className="w-4 h-4 text-[#967c26]" />
+                                <span className="text-[#967c26] text-xs tracking-[0.2em] font-medium">OUR EXPERTISE</span>
                             </div>
 
                             <h2 className="md:text-6xl text-4xl font-extralight text-[#2d2416] mb-8 leading-[1.1]">
@@ -446,7 +446,7 @@ export default function HolmacHomepage() {
 
                             <div className="md:space-y-6 space-y-3 text-[#5a4e3c] leading-relaxed mb-10">
                                 <p className="md:text-lg text-md">
-                                    We specialize in <span className="text-[#967c26] font-medium">premium natural wall finishes</span> inspired by traditional lime plaster and lime-based coatings, creating stunning backdrops for your living spaces.
+                                    We specialize in <span className="text-[#967c26] font-medium">premium natural wall finishes</span> inspired by traditional lime plaster and lime-based paintings, creating stunning backdrops for your living spaces.
                                 </p>
                                 <p className="md:text-md text-sm">
                                     Our wall products are crafted from natural raw materials including finely crushed clay, premium lime, and mineral pigments to create rich, durable, and eco-friendly surfaces that elevate both interiors and exteriors.
@@ -600,7 +600,7 @@ export default function HolmacHomepage() {
                                 link: '/products/venetian'
                             },
                             {
-                                title: 'Lime-Based Coating',
+                                title: 'Lime-Based Painting',
                                 desc: 'Breathable, eco-friendly finish perfect for modern spaces with natural texture and sustainable properties.',
                                 img: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768303654/limebased_fyxspw.jpg',
                                 features: ['Eco-Friendly', 'Breathable', 'Natural Texture'],
@@ -905,7 +905,7 @@ export default function HolmacHomepage() {
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#967c26] mt-1">•</span>
-                                    Lime-Based Coatings
+                                    Lime-Based Paintings
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#967c26] mt-1">•</span>
@@ -923,8 +923,8 @@ export default function HolmacHomepage() {
                         </div>
                         {/* Contact Info */}
                         <div>
-                            <h4 className="text-sm tracking-[0.2em] mb-6 text-[#967c26] font-medium">REACH US</h4>
-                            <div className="space-y-4 text-sm">
+                            <h4 className="text-md tracking-[0.2em] mb-6 text-[#967c26] font-medium">REACH US</h4>
+                            <div className="space-y-4 text-md">
                                 <div className="flex items-start gap-3">
                                     <Phone className="w-4 h-4 text-[#967c26] mt-1 shrink-0" />
                                     <div className="text-[#b8985f]">

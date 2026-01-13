@@ -209,13 +209,13 @@ export default function IndependentHouse() {
 
                             <div className="space-y-6 text-[#5a4e3c] mb-10">
                                 <p className="text-lg md:text-xl font-light leading-relaxed tracking-wide">
-                                    Where architecture meets artistry, and every surface becomes a canvas for timeless beauty.
+                                    Transforming private residences into architectural masterpieces through complete interior and exterior overhaul.
                                 </p>
                                 <p className="leading-relaxed text-[#6b6257]">
-                                    Our approach to independent house interiors combines centuries-old Venetian plastering techniques with contemporary sensibilities. Each project is a dialogue between space, light, and texture—resulting in walls that breathe character and sophistication.
+                                    For independent villas, we offer a <strong>comprehensive service suite</strong>: custom staircase designs, full-house modular cabinetry, curated furniture sets, and our world-class natural clay and lime wall treatments.
                                 </p>
                                 <p className="leading-relaxed text-[#6b6257]">
-                                    From the grand entrance to intimate private quarters, we craft environments that evolve with natural light throughout the day, revealing new dimensions and subtle variations in tone.
+                                    We take pride in being a "concept-to-completion" partner. Whether it is a grand entrance lobby or a private home theater, we ensure every corner of your home reflects a unified vision of luxury and personal character.
                                 </p>
                             </div>
 
@@ -341,7 +341,7 @@ export default function IndependentHouse() {
                         </a>
                     </div>
 
-                    <ContactFooter/>
+                    <ContactFooter />
                 </div>
             </section>
 
@@ -408,8 +408,8 @@ export default function IndependentHouse() {
                                 <div
                                     key={img.id}
                                     className={`shrink-0 w-20 h-20 cursor-pointer transition-all duration-300 ${idx === currentImageIndex
-                                            ? 'opacity-100 ring-2 ring-[#d4af37]'
-                                            : 'opacity-40 hover:opacity-70'
+                                        ? 'opacity-100 ring-2 ring-[#d4af37]'
+                                        : 'opacity-40 hover:opacity-70'
                                         }`}
                                     onClick={(e) => {
                                         e.stopPropagation();
