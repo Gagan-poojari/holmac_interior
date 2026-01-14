@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   // Brand title from company profile [cite: 3, 24]
-  title: "Holmac Interior – House Interior Designers in Udupi",
+  title: "Holmac Interior - House Interior Designers in Udupi",
   description: "Holmac Interior is a professional house interior design company in Udupi offering custom home interiors, modular kitchens, wardrobes, and turnkey interior solutions.",
   // Browser Icon Setup
   icons: {
