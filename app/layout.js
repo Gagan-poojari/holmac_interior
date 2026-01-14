@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   // Brand title from company profile [cite: 3, 24]
-  title: "Holmac interior",
-  description: "Specializing in premium natural wall finishes including Venetian plaster, lime-based coatings, and earth walls[cite: 8, 17].",
+  title: "Holmac Interior – House Interior Designers in Udupi",
+  description: "Holmac Interior is a professional house interior design company in Udupi offering custom home interiors, modular kitchens, wardrobes, and turnkey interior solutions.",
   // Browser Icon Setup
   icons: {
     icon: "/holmac_circle.png", // This sets your browser tab icon
