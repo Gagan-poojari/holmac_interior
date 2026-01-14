@@ -6,7 +6,7 @@ import PhoneNavbar from './PhoneNavbar';
 import CalculatorWidget from './CalculatorWidget';
 import emailjs from "@emailjs/browser";
 import Link from 'next/link';
-import ReviewPage from './reviewPage';
+import ReviewPage from './ReviewPage';
 
 
 export default function HolmacHomepage() {

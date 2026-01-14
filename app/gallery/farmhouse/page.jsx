@@ -281,10 +281,10 @@ export default function FarmhouseGallery() {
                                 />
                                 {/* <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" /> */}
 
-                                <div className="absolute inset-x-0 bottom-0 p-6 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                {/* <div className="absolute inset-x-0 bottom-0 p-6 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                                     <h3 className="text-white font-light text-base tracking-wide mb-1">{image.title}</h3>
                                     <p className="text-white/70 text-xs font-light tracking-wide">{image.description}</p>
-                                </div>
+                                </div> */}
 
                                 <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ borderRadius: '2px' }}>
                                     <ZoomIn className="w-4 h-4 text-[#2d2416]" />

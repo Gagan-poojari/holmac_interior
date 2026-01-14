@@ -1,7 +1,14 @@
-import { Star } from 'lucide-react';
-import { useState } from 'react';
+import { Star, Quote, Users, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function ReviewPage() {
+  const [expandedReviews, setExpandedReviews] = useState({});
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+  const scrollContainerRef = useRef(null);
+  const sectionRef = useRef(null);
   const reviews = [
     {
       id: 1,
@@ -58,7 +65,7 @@ export default function ReviewPage() {
       name: "Vishal Kiran Bettu",
       title: "Founder, Creative Studios",
       rating: 5,
-      text: "Holmac Interiors understood the our requirements and provided hassle free and quality workers .Planned everything and delivered us a smart good looking interior on time as promised. I will highly recommend holmac Interiors to anyone looking for a value for money and excellent quality work . Ganesh and him Team have done an very fantastic job."
+      text: "Holmac Interiors understood the our requirements and provided hassle free and quality workers. Planned everything and delivered us a smart good looking interior on time as promised. I will highly recommend holmac Interiors to anyone looking for a value for money and excellent quality work . Ganesh and him Team have done an very fantastic job."
     },
     {
       id: 9,
@@ -76,55 +83,225 @@ export default function ReviewPage() {
     },
   ];
 
-  const ReviewCard = ({ review }) => {
-    const [expanded, setExpanded] = useState(false);
-    const maxLength = 150;
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const updateScrollButtons = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener('scroll', updateScrollButtons);
+      updateScrollButtons();
+      return () => container.removeEventListener('scroll', updateScrollButtons);
+    }
+  }, []);
+
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const cardWidth = 400; // Approximate card width + gap
+      const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+      scrollContainerRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const toggleExpanded = (id) => {
+    setExpandedReviews(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
+  const ReviewCard = ({ review, index }) => {
+    const maxLength = 200;
+    const isExpanded = expandedReviews[review.id];
     const isLong = review.text.length > maxLength;
-    const displayText = expanded ? review.text : review.text.substring(0, maxLength);
+    const displayText = isExpanded ? review.text : review.text.substring(0, maxLength);
 
     return (
-      <div className="bg-white border border-amber-200 p-8 rounded-lg hover:shadow-lg transition-shadow flex-shrink-0 w-80">
-        <div className="flex gap-1 mb-4">
-          {[...Array(review.rating)].map((_, i) => (
-            <Star key={i} size={16} className="fill-amber-400 text-amber-400" />
-          ))}
+      <div 
+        className="group relative bg-white shrink-0 w-85 md:w-95 p-8 rounded-sm shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col"
+      >
+        {/* Quote icon background */}
+        <div className="absolute -top-3 -right-3 w-20 h-20 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+          <Quote className="w-full h-full text-[#967c26] transform rotate-12" />
         </div>
-        <p className="text-gray-700 mb-4 whitespace-pre-wrap">
-          "{displayText}{!expanded && isLong ? '...' : ''}"
-        </p>
-        {isLong && (
-          <button
-            onClick={() => setExpanded(!expanded)}
-            className="text-amber-700 font-semibold text-sm hover:text-amber-900 mb-4"
-          >
-            {expanded ? 'Read Less' : 'Read More'}
-          </button>
-        )}
-        <div className="border-t border-amber-200 pt-4">
-          <p className="font-semibold text-gray-900">{review.name}</p>
+
+        <div className="relative z-10 flex flex-col h-full">
+          {/* Stars */}
+          <div className="flex gap-1 mb-6">
+            {[...Array(review.rating)].map((_, i) => (
+              <div key={i} className="transform group-hover:scale-110 transition-transform duration-300" style={{ transitionDelay: `${i * 30}ms` }}>
+                <Star className="w-5 h-5 fill-[#967c26] text-[#967c26]" />
+              </div>
+            ))}
+          </div>
+
+          {/* Review text */}
+          <div className="flex-1 mb-6">
+            <p className="text-[#5a4e3c] leading-relaxed text-sm md:text-base">
+              "{displayText}{!isExpanded && isLong ? '...' : ''}"
+            </p>
+            {isLong && (
+              <button
+                onClick={() => toggleExpanded(review.id)}
+                className="mt-3 text-[#967c26] font-medium text-sm hover:text-[#2d2416] transition-colors duration-300"
+              >
+                {isExpanded ? '- Show Less' : '+ Read More'}
+              </button>
+            )}
+          </div>
+
+          {/* Author info */}
+          <div className="border-t border-[#967c26]/20 pt-6 mt-auto">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#967c26] to-[#c9a552] flex items-center justify-center text-white font-semibold text-lg shrink-0 group-hover:scale-110 transition-transform duration-500">
+                {review.name.charAt(0)}
+              </div>
+              <div>
+                <p className="font-semibold text-[#2d2416] group-hover:text-[#967c26] transition-colors duration-300">
+                  {review.name}
+                </p>
+                <p className="text-[#5a4e3c] text-sm">{review.title}</p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* Bottom accent line */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-[#967c26] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
       </div>
     );
   };
 
   return (
-    <div className="bg-[#f5f2ea]">
-      {/* Header */}
-      <div className="text-white px-8 pt-10">
-        <div className="max-w-6xl text-center mx-auto">
-          <h1 className="text-4xl font-bold text-[#2d2416] mb-2">Client Reviews</h1>
-          <p className="text-[#967c26]">What our clients say about us</p>
+    <section ref={sectionRef} className="relative py-20 md:py-32 px-6 bg-[#f5f2ea] bg-plaster overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-20 right-0 w-96 h-96 bg-[#967c26]/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-0 w-96 h-96 bg-[#c9a552]/5 rounded-full blur-3xl" />
+
+      <div className="max-w-7xl mx-auto relative">
+        {/* Header */}
+        <div className={`text-center mb-12 md:mb-16 ${isVisible ? 'animate-in' : 'opacity-0'}`}>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#967c26]/10 rounded-full mb-6">
+            <Users className="w-4 h-4 text-[#967c26]" />
+            <span className="text-[#967c26] text-xs tracking-[0.2em] font-medium">CLIENT TESTIMONIALS</span>
+          </div>
+          
+          <h2 className="text-4xl md:text-6xl font-extralight text-[#2d2416] mb-6">
+            What Our <span className="text-[#967c26] italic">Clients</span> Say
+          </h2>
+          
+          <p className="text-[#5a4e3c] max-w-2xl mx-auto text-lg">
+            Real stories from homeowners who transformed their spaces with Holmac
+          </p>
+
+          {/* Stats */}
+          <div className="flex justify-center gap-8 md:gap-12 mt-8">
+            <div className="text-center">
+              <div className="text-3xl md:text-5xl font-light text-[#967c26] mb-2">500+</div>
+              <div className="text-xs md:text-sm text-[#5a4e3c] tracking-wider">Happy Clients</div>
+            </div>
+            <div className="w-px bg-[#967c26]/20" />
+            <div className="text-center">
+              <div className="text-3xl md:text-5xl font-light text-[#967c26] mb-2">5.0</div>
+              <div className="text-xs md:text-sm text-[#5a4e3c] tracking-wider flex items-center gap-1">
+                <Star className="w-4 h-4 fill-[#967c26] text-[#967c26]" />
+                Rating
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Horizontal Scroll Container */}
+        <div className="relative">
+          {/* Left Navigation Button */}
+          <button
+            onClick={() => scroll('left')}
+            disabled={!canScrollLeft}
+            className={`hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-20 w-14 h-14 rounded-full bg-[#967c26] text-white items-center justify-center shadow-xl hover:bg-[#2d2416] transition-all duration-300 hover:scale-110 ${
+              !canScrollLeft ? 'opacity-0 pointer-events-none' : 'opacity-100'
+            }`}
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+
+          {/* Right Navigation Button */}
+          <button
+            onClick={() => scroll('right')}
+            disabled={!canScrollRight}
+            className={`hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-20 w-14 h-14 rounded-full bg-[#967c26] text-white items-center justify-center shadow-xl hover:bg-[#2d2416] transition-all duration-300 hover:scale-110 ${
+              !canScrollRight ? 'opacity-0 pointer-events-none' : 'opacity-100'
+            }`}
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Scroll Container */}
+          <div 
+            ref={scrollContainerRef}
+            className="flex gap-6 overflow-x-auto pb-8 px-2 snap-x snap-mandatory scrollbar-hide scroll-smooth"
+            style={{
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+            }}
+          >
+            {reviews.map((review, index) => (
+              <div key={review.id} className="snap-start">
+                <ReviewCard review={review} index={index} />
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile scroll indicator */}
+          <div className="md:hidden flex justify-center gap-2 mt-6">
+            {reviews.slice(0, 5).map((_, idx) => (
+              <div
+                key={idx}
+                className="h-1.5 w-8 rounded-full bg-[#967c26]/20"
+              />
+            ))}
+            <span className="text-[#5a4e3c] text-sm ml-2">Swipe for more →</span>
+          </div>
         </div>
       </div>
 
-      {/* Reviews */}
-      <div className="max-w-6xl mx-auto px-8 py-16 overflow-x-auto">
-        <div className="flex gap-8 -webkit-scrollbar min-w-max">
-          {reviews.map((review) => (
-            <ReviewCard key={review.id} review={review} />
-          ))}
-        </div>
-      </div>
-    </div>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes animate-in {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          .animate-in { animation: animate-in 0.8s ease-out forwards; }
+          .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+          }
+        `
+      }} />
+    </section>
   );
 }
