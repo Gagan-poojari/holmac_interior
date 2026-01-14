@@ -114,6 +114,7 @@ export default function EntranceAnimation({ onComplete }) {
         className="w-full h-full object-cover"
         playsInline
         preload="auto"
+        muted={false} 
         src="https://res.cloudinary.com/djfxdsmvk/video/upload/v1768325644/holmac_cboxyh.mp4"
       />
             

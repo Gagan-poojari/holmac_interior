@@ -190,7 +190,7 @@ export default function ApartmentGallery() {
                                 <div className="absolute -inset-4 bg-linear-to-br from-[#d4af37]/5 via-transparent to-[#c9a552]/5 rounded-lg blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                                 <div className="relative overflow-hidden" style={{ borderRadius: '2px' }}>
                                     <img
-                                        src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=1400&q=90"
+                                        src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768118656/apartment6_iytkkq.jpg"
                                         alt="Apartment Interior"
                                         className="w-full h-112.5 md:h-150 object-cover transform group-hover:scale-[1.02] transition-transform duration-700"
                                     />

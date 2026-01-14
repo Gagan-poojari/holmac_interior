@@ -186,7 +186,7 @@ export default function LimeBasedCoatingPage() {
                             <div className="relative group">
                                 <div className="absolute -inset-4 bg-linear-to-br from-[#d4af37]/10 via-transparent to-[#c9a552]/10 blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-700"></div>
                                 <img
-                                    src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=1200&q=90"
+                                    src="https://limocoat.b-cdn.net/uploads/product/gallery/medium/stucco-lime-plaster-50.jpg"
                                     alt="Lime-Based Coating Finish"
                                     className="relative w-full h-125 md:h-150 object-cover shadow-2xl"
                                     style={{ borderRadius: '2px' }}

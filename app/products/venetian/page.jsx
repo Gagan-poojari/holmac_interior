@@ -186,7 +186,7 @@ export default function limePlasterPage() {
                             <div className="relative group">
                                 <div className="absolute -inset-4 bg-linear-to-br from-[#d4af37]/10 via-transparent to-[#c9a552]/10 blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-700"></div>
                                 <img
-                                    src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200&q=90"
+                                    src="https://res.cloudinary.com/djfxdsmvk/image/upload/v1768386070/lime1_eazy0d.jpg"
                                     alt="lime Plaster Finish"
                                     className="relative w-full h-125 md:h-150 object-cover shadow-2xl"
                                     style={{ borderRadius: '2px' }}
@@ -215,17 +215,17 @@ export default function limePlasterPage() {
                             {
                                 title: 'Polished Finish',
                                 description: 'Mirror-like sheen with deep luminosity, resembling polished marble',
-                                image: 'https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=800&q=90'
+                                image: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768386071/lime3_vc3yfw.jpg'
                             },
                             {
                                 title: 'Matte Texture',
                                 description: 'Soft, velvety surface with subtle color variations and depth',
-                                image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=90'
+                                image: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768386070/lime2_wfkek0.jpg'
                             },
                             {
                                 title: 'Color Depth',
                                 description: 'Multiple translucent layers create an illusion of three-dimensionality',
-                                image: 'https://images.unsplash.com/photo-1615873968403-89e068629265?w=800&q=90'
+                                image: 'https://res.cloudinary.com/djfxdsmvk/image/upload/v1768386071/lime4_yov7u9.jpg'
                             }
                         ].map((item, idx) => (
                             <div
