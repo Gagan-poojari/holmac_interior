@@ -26,6 +26,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
+    import Script from "next/script";
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-T8VRPXS3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f8f6f1] text-[#2d2416]`}
       >
